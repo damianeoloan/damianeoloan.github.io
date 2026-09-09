@@ -1,12 +1,6 @@
 <!-- Blog post index item -->
 <li>
-  <svg class="post-meta" viewbox="0,0,50,50" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="25" cy="25" r="25" />
-    <text class="day" x="25" y="30" text-anchor="middle" >{{ post.date | date: "%-d" }}</text>
-    <text class="month" x="25" y="45" text-anchor="middle" >{{ post.date | date: "%b" | upcase }}</text>
-    <text class="year" x="25" y="45" text-anchor="middle" >{{ post.date | date: "%Y" | upcase }}</text>
-    </g>
-  </svg>
+  <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B, %Y" }}</time>
 
   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
     <h2 class="no-margin">
