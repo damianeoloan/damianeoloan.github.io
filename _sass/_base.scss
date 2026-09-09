@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $dark-grey;
-    background-color: $grey-color;
+    background-color: $white-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -270,14 +270,14 @@ blockquote {
  * Code formatting
  */
 code {
-  background: $grey-color;
+  background: $white-color;
   font-size: $small-font-size;
   padding: .15em .4em;
   border-radius: 3px;
 }
 pre {
   line-height: 1.5;
-  background: $grey-color;
+  background: $white-color;
   font-size: $small-font-size;
   padding: 1rem 1.6rem;
   margin: 0 auto var(--spacing-unit);

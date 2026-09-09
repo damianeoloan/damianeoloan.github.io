@@ -5,7 +5,7 @@
   width: 100%;
   border-top: 0.25rem solid $grey-color;
   font-family: $title-font-family;
-  background: $dark-grey;
+  background: $white-color;
 }
 
 .site-title .site-name {
@@ -65,7 +65,7 @@ div.nav-container {
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(2,2,2,0.9);
+  background: $white-color;
   text-align: center;
   z-index: 100;
   label {
@@ -126,7 +126,7 @@ input#ctrl:checked + div.icon-container~div.fullscreen {
 
 nav.menu a.nav-link {
   display: block;
-  color: $grey-color;
+  color: $dark-grey;
   font-size: 5rem;
   opacity: 0.6;
   -webkit-transition: opacity 0.5s ease-in;
@@ -148,7 +148,7 @@ input#ctrl:checked~nav.menu a.page-link {
  * Site footer
  */
 .site-footer {
-    background: $dark-grey;
+    background: $white-color;
     padding: calc(var(--spacing-unit) / 2) 0;
     margin: var(--spacing-unit) auto 0;
     text-align: center;
@@ -169,7 +169,7 @@ nav.footer-nav {
   margin-bottom: calc(var(--spacing-unit) / 2);
   a {
     text-decoration: none;
-    color: $grey-color;
+    color: $dark-grey;
     padding: calc(var(--spacing-unit) / 4) var(--spacing-unit);
     -webkit-transition: color 250ms ease-in;
     transition: color 250ms ease-in;
@@ -291,7 +291,7 @@ h1.post-title {
    width: 70%;
    margin: 0 auto var(--spacing-unit);
    z-index: 1;
-   background: $grey-color;
+   background: $white-color;
    @include media-query($on-desktop) { width: 66.66666666%; }
    @include media-query($on-tablet) { width: 70%; }
    @include media-query($on-mobile) { width: 90%; }
@@ -351,7 +351,7 @@ h1.post-title {
    }
 
    li:nth-of-type(3n+1) {
-     background: $grey-color;
+     background: $white-color;
      svg.post-meta {
        circle { fill: $accent-color; }
        text {
@@ -361,7 +361,7 @@ h1.post-title {
      }
 
      h2 {
-       color: $accent-color;
+       color: $dark-grey;
      }
 
      a.post-link {
@@ -370,7 +370,7 @@ h1.post-title {
    }
 
    li:nth-of-type(3n+2) {
-     background: $dark-grey;
+     background: $white-color;
      svg.post-meta {
        circle { fill: $grey-color; }
        text {
@@ -380,16 +380,16 @@ h1.post-title {
      }
 
      a.post-link {
-       color: $grey-color;
+       color: $dark-grey;
      }
 
      h2, p {
-       color: $grey-color;
+       color: $dark-grey;
      }
   }
 
   li:nth-of-type(3n+0) {
-    background: $accent-color;
+    background: $white-color;
     svg.post-meta {
       circle { fill: $white-color; }
        text {
@@ -398,9 +398,9 @@ h1.post-title {
        }
     }
 
-    a.post-link { color: $white-color; }
+    a.post-link { color: $dark-grey; }
 
-    p { color: $white-color; }
+    p { color: $dark-grey; }
   }
 }
 
@@ -485,8 +485,8 @@ div.gallery-slide-meta {
   justify-content: flex-end;
   align-items: flex-end;
   padding: calc(var(--spacing-unit) / 2);
-  background: linear-gradient(to top, rgba(2, 2, 2, 0.8), transparent);
-  color: $white-color;
+  background: $white-color;
+  color: $dark-grey;
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
@@ -507,8 +507,8 @@ a.gallery-next {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  background: rgba(2, 2, 2, 0.5);
-  color: $white-color;
+  background: $white-color;
+  color: $dark-grey;
   font-size: 2.4rem;
   text-decoration: none;
   opacity: 0;
@@ -540,13 +540,13 @@ div.gallery-dots {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: $grey-color;
+    background: $white-color;
     border: 1px solid $dark-grey;
   }
 
   a.gallery-dot:hover,
   a.gallery-dot:focus {
-    background: $accent-color;
+    background: $white-color;
   }
 }
 
@@ -558,7 +558,7 @@ ul.gallery-index {
   width: 70%;
   margin: 0 auto var(--spacing-unit);
   z-index: 1;
-  background: $grey-color;
+  background: $white-color;
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
@@ -586,21 +586,21 @@ ul.gallery-index {
   }
 
   li:nth-of-type(3n+1) {
-    background: $grey-color;
-    h2 { color: $accent-color; }
+    background: $white-color;
+    h2 { color: $dark-grey; }
     a.gallery-link { color: $dark-grey; }
   }
 
   li:nth-of-type(3n+2) {
-    background: $dark-grey;
-    a.gallery-link { color: $grey-color; }
-    h2, p { color: $grey-color; }
+    background: $white-color;
+    a.gallery-link { color: $dark-grey; }
+    h2, p { color: $dark-grey; }
   }
 
   li:nth-of-type(3n+0) {
-    background: $accent-color;
-    a.gallery-link { color: $white-color; }
-    p { color: $white-color; }
+    background: $white-color;
+    a.gallery-link { color: $dark-grey; }
+    p { color: $dark-grey; }
   }
 }
 
@@ -612,7 +612,7 @@ ul.archive-index {
   width: 70%;
   margin: 0 auto var(--spacing-unit);
   z-index: 1;
-  background: $grey-color;
+  background: $white-color;
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
@@ -635,21 +635,21 @@ ul.archive-index {
   }
 
   li:nth-of-type(3n+1) {
-    background: $grey-color;
-    h2 { color: $accent-color; }
+    background: $white-color;
+    h2 { color: $dark-grey; }
     a.archive-link { color: $dark-grey; }
   }
 
   li:nth-of-type(3n+2) {
-    background: $dark-grey;
-    a.archive-link { color: $grey-color; }
-    h2, p { color: $grey-color; }
+    background: $white-color;
+    a.archive-link { color: $dark-grey; }
+    h2, p { color: $dark-grey; }
   }
 
   li:nth-of-type(3n+0) {
-    background: $accent-color;
-    a.archive-link { color: $white-color; }
-    p { color: $white-color; }
+    background: $white-color;
+    a.archive-link { color: $dark-grey; }
+    p { color: $dark-grey; }
   }
 }
 
@@ -678,7 +678,7 @@ div.pagination {
   .paginate-link {
     display: inline-block;
     padding: 1.5rem 3rem;
-    background: $grey-color;
+    background: $white-color;
     font-size: 2.6rem;
     text-decoration: none;
     line-height: 1;
@@ -722,8 +722,8 @@ div.pagination {
  section.hero {
    width: 100%;
    height: 100vh;
-   background: $dark-grey;
-   color: $white-color;
+   background: $white-color;
+   color: $dark-grey;
    margin: 0;
    position: relative;
    div.namecard {
@@ -767,8 +767,8 @@ div.pagination {
      }
      a.button {
        padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
-       border: 2px solid $white-color;
-       color: $white-color;
+       border: 2px solid $dark-grey;
+       color: $dark-grey;
        text-decoration: none;
        text-align: center;
        transition: 250ms ease-in;
@@ -834,7 +834,7 @@ ol.timeline {
     left: 0;
     width: 2px;
     height: var(--spacing-unit);
-    background-color: $dark-grey;
+    background-color: $white-color;
   }
 
   /* No trailing line after the final event. */
