@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<article class="archive-page">
-<div class="post-content" itemprop="articleBody">
+<article class="archive-page" itemscope itemtype="https://schema.org/CollectionPage">
+<div class="post-content" itemprop="text">
   <header>
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
     <p class="archive-meta post-meta">{{ page.source }}{% if page.time-period %} &middot; {{ page.time-period.start }} - {{ page.time-period.end }}{% endif %}</p>
   </header>
 
