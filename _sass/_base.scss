@@ -99,6 +99,11 @@ table {
   }
   th {
     text-align: center !important;
+    /* A column label, so it takes the title family like dt does - without
+       this it inherits the body serif, and the UA's default bold leaves it
+       the only 700 anywhere on the site. */
+    font-family: $title-font-family;
+    font-weight: $title-font-weight;
   }
   th, td {
     border: 1px solid $grey-color;
