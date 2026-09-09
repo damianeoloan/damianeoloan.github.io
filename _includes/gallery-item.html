@@ -1,0 +1,14 @@
+<!-- Gallery index item -->
+<li>
+  <a class="gallery-thumb-link" href="{{ gallery.url | prepend: site.baseurl }}">
+    <img class="gallery-thumb" src="{{ site.baseurl }}/img/galleries/{{ gallery.slug }}/{{ gallery.images[0] }}" alt="{{ gallery.title }}">
+  </a>
+
+  <a class="gallery-link" href="{{ gallery.url | prepend: site.baseurl }}">
+    <h2 class="no-margin">
+      {{ gallery.title }}
+    </h2>
+  </a>
+
+  <p class="gallery-meta">{{ gallery.location }}{% if gallery.time-period %} &middot; {{ gallery.time-period.start }} - {{ gallery.time-period.end }}{% endif %}</p>
+</li><!-- End gallery index item -->

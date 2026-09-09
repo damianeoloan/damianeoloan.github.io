@@ -1,0 +1,30 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="900" fill="#fff"/>
+  <circle cx="470" cy="160" r="34" fill="#000"/>
+  <!-- mountain ridge: three overlapping peaks -->
+  <polygon points="10,560 220,560 115,330" fill="#000"/>
+  <polygon points="140,560 460,560 300,260" fill="#000"/>
+  <polygon points="380,560 590,560 485,370" fill="#000"/>
+  <line x1="0" y1="700" x2="600" y2="700" stroke="#000" stroke-width="2"/>
+  <!-- three friends on the ridge -->
+  <g fill="#000">
+    <g transform="translate(220,620)">
+      <circle cx="0" cy="-40" r="11" fill="#000"/>
+      <path d="M-8,-28 L8,-28 L11,40 L-11,40 Z" fill="#000"/>
+      <line x1="-14" y1="-30" x2="-14" y2="42" stroke="#000" stroke-width="3"/>
+      <line x1="14" y1="-30" x2="14" y2="42" stroke="#000" stroke-width="3"/>
+    </g>
+    <g transform="translate(300,600)">
+      <circle cx="0" cy="-44" r="12" fill="#000"/>
+      <path d="M-9,-30 L9,-30 L12,44 L-12,44 Z" fill="#000"/>
+      <line x1="-16" y1="-32" x2="-16" y2="46" stroke="#000" stroke-width="3"/>
+      <line x1="16" y1="-32" x2="16" y2="46" stroke="#000" stroke-width="3"/>
+    </g>
+    <g transform="translate(380,620)">
+      <circle cx="0" cy="-40" r="11" fill="#000"/>
+      <path d="M-8,-28 L8,-28 L11,40 L-11,40 Z" fill="#000"/>
+      <line x1="-14" y1="-30" x2="-14" y2="42" stroke="#000" stroke-width="3"/>
+      <line x1="14" y1="-30" x2="14" y2="42" stroke="#000" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+---
+layout: page
+title: Timeline
+permalink: /timeline/
+---
+{% comment %}
+  Test page for the timeline include, and the styling target for the
+  .timeline-* classes (none of which have any CSS yet).
+
+  The include emits the whole <article>, heading included, so there is
+  nothing to wrap here. heading_level is left at its default of 2, which
+  is correct under the <h1> this page's layout supplies.
+
+  <article> rather than <section>: a timeline is reusable content in its
+  own right - the same one can be discussed in a post, revisited in
+  another post years later, or presented here without comment - which is
+  the spec's test for <article> ("independently distributable or
+  reusable"), and is why the data lives in _data/ rather than in a page.
+  Nesting inside the `page` layout's own <article> is fine: nested
+  articles are permitted, the inner one read as related to the outer.
+{% endcomment %}
+{% include timeline.html timeline=site.data.timelines.first_timeline %}

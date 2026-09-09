@@ -1,0 +1,66 @@
+{% comment %}
+  Renders one timeline as a self-contained <article>:
+
+    {% include timeline.html timeline=site.data.timelines.first_timeline %}
+
+  The article, its heading and its list are emitted together, because the
+  heading is the article's accessible name - splitting them across the
+  include and the call site would let an article and the name it points at
+  drift into different files.
+
+  Heading level is the one genuinely page-level concern, so it stays a
+  parameter: this defaults to <h2>, which suits a page whose layout already
+  supplies the <h1>. A post embedding a timeline under its own subheading
+  passes heading_level=3, and so on.
+
+    {% include timeline.html timeline=... heading_level=3 %}
+    {% include timeline.html timeline=... format="%B %Y" %}
+    {% include timeline.html timeline=... id="early-years" %}
+
+  The heading's id is derived from the title, so aria-labelledby resolves
+  without the caller doing anything; id= overrides it when two timelines on
+  one page would otherwise collide. A timeline with no title renders with
+  no heading and no dangling aria-labelledby.
+
+  Events render in the order they appear in _data/timelines.yml - this
+  template deliberately does not sort them, so the data file stays the
+  single source of the running order.
+
+  `date` may be a real date or free text, and the two are told apart by
+  .size: a string answers it, a Date object doesn't. Only real dates are
+  passed through the `date` filter, because that filter quietly mangles
+  partial dates - "2003" is read as a Unix timestamp and renders as
+  31 Dec 1969, and "June 2003" becomes 1 Jun 2003, inventing a day that was
+  never written. Free text is printed verbatim, and only a real date earns a
+  <time datetime="..."> element.
+{% endcomment -%}
+{%- assign timeline = include.timeline -%}
+{%- assign format = include.format | default: "%-d %b %Y" -%}
+{%- assign level = include.heading_level | default: 2 -%}
+{%- if include.id -%}
+  {%- assign heading_id = include.id -%}
+{%- else -%}
+  {%- assign heading_id = timeline.title | slugify | append: "-timeline" -%}
+{%- endif -%}
+<article class="timeline-article"{% if timeline.title %} aria-labelledby="{{ heading_id }}"{% endif %}>
+  {%- if timeline.title %}
+  <h{{ level }} class="timeline-title" id="{{ heading_id }}">{{ timeline.title }}</h{{ level }}>
+  {%- endif %}
+  {%- if timeline.description %}
+  <p class="timeline-description">{{ timeline.description }}</p>
+  {%- endif %}
+  <ol class="timeline">
+    {%- for event in timeline.events %}
+    <li class="timeline-event">
+      {%- if event.date %}
+        {%- if event.date.size %}
+      <span class="timeline-date">{{ event.date }}</span>
+        {%- else %}
+      <time class="timeline-date" datetime="{{ event.date | date: "%Y-%m-%d" }}">{{ event.date | date: format }}</time>
+        {%- endif -%}
+      {%- endif %}
+      <p class="timeline-event-summary">{{ event.summary }}</p>
+    </li>
+    {%- endfor %}
+  </ol>
+</article>

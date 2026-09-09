@@ -1,0 +1,10 @@
+<!-- Archive index item -->
+<li>
+  <a class="archive-link" href="{{ archive.url | prepend: site.baseurl }}">
+    <h2 class="no-margin">
+      {{ archive.title }}
+    </h2>
+  </a>
+
+  <p class="archive-meta">{{ archive.source }}{% if archive.time-period %} &middot; {{ archive.time-period.start }} - {{ archive.time-period.end }}{% endif %}</p>
+</li><!-- End archive index item -->

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="gallery-page">
+<div class="post-content" itemprop="articleBody">
+  <header>
+    <h1 class="post-title no-margin">{{ page.title }}</h1>
+    <p class="gallery-meta post-meta">{{ page.location }}{% if page.time-period %} &middot; {{ page.time-period.start }} - {{ page.time-period.end }}{% endif %}</p>
+  </header>
+
+  {% if page.images %}
+  <!-- Start gallery -->
+  <div class="gallery-container orientation-{{ page.orientation | default: 'landscape' }}">
+    <div class="gallery-scroller" tabindex="0" role="group" aria-label="{{ page.title }} photo gallery">
+      {% assign total = page.images.size %}
+      {% for img in page.images %}
+        {% assign prev_index = forloop.index | minus: 1 %}
+        {% if prev_index == 0 %}{% assign prev_index = total %}{% endif %}
+        {% assign next_index = forloop.index | plus: 1 %}
+        {% if next_index > total %}{% assign next_index = 1 %}{% endif %}
+      <div class="gallery-slide" id="slide-{{ forloop.index }}">
+        <img src="{{ site.baseurl }}/img/galleries/{{ page.slug }}/{{ img }}" alt="{{ forloop.index | prepend: ' image '| prepend: page.title }}" loading="lazy" decoding="async">
+        <div class="gallery-slide-meta">
+          <span class="gallery-counter">{{ forloop.index }} / {{ total }}</span>
+        </div>
+        {% if total > 1 %}
+        <a class="gallery-prev" href="#slide-{{ prev_index }}" aria-label="Previous image">&#8249;</a>
+        <a class="gallery-next" href="#slide-{{ next_index }}" aria-label="Next image">&#8250;</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if total > 1 %}
+    <div class="gallery-dots">
+      {% for img in page.images %}
+      <a href="#slide-{{ forloop.index }}" class="gallery-dot" aria-label="{{ forloop.index | prepend: 'Go to image ' }}"></a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div><!-- End gallery -->
+  {% endif %}
+
+  {{ content }}
+</div>
+</article>
+{% include collection-nav.html collection=site.galleries label="Gallery" %}

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#fff"/>
+  <line x1="0" y1="430" x2="900" y2="430" stroke="#000" stroke-width="2"/>
+  <circle cx="770" cy="90" r="26" fill="#000"/>
+  <circle cx="758" cy="82" r="26" fill="#fff"/>
+  <!-- Eiffel Tower silhouette: stacked symmetric trapezoids, centered on x=450 -->
+  <polygon points="320,430 580,430 505,330 395,330" fill="#000"/>
+  <polygon points="380,330 520,330 495,300 405,300" fill="#000"/>
+  <polygon points="405,300 495,300 468,170 432,170" fill="#000"/>
+  <polygon points="432,170 468,170 450,90" fill="#000"/>
+</svg>

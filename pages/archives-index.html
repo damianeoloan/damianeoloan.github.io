@@ -1,0 +1,59 @@
+---
+layout: page
+title: Archives
+permalink: /archives/
+---
+{% comment %}
+  Pagination: jekyll-paginate (v1, bundled via the github-pages gem) only
+  ever works against site.posts - verified directly from its installed
+  source, which hardcodes site.site_payload['site']['posts'] with no
+  config override. jekyll-paginate-v2 does support paginating a named
+  collection, but isn't in the github-pages gem's whitelist, so using it
+  means moving off GitHub Pages' classic auto-build to a custom GitHub
+  Actions workflow - not done here.
+
+  This template is written to work correctly either way, with no changes
+  needed if that migration happens later: jekyll-paginate-v2's paginator
+  object uses identical field names to v1 (paginator.posts, .page,
+  .total_pages, .previous_page(_path), .next_page(_path), confirmed from
+  its docs, including the loop variable staying `posts` in collection
+  mode) - paginator only exists on a page where a real pagination
+  generator actually ran, so testing for its presence is enough to branch
+  between "real, plugin-driven pagination" and "no plugin, list
+  everything." To activate real pagination later, add
+  `pagination: { enabled: true, collection: archives, sort_field: weight,
+  sort_reverse: false }` to this file's front matter and install
+  jekyll-paginate-v2 - nothing below needs to change. The sort_field is
+  required: verified by test (installed jekyll-paginate-v2 locally, then
+  reverted) that it defaults to sorting by `date`, which this collection's
+  documents don't have, silently falling back to file order instead of
+  this collection's `weight` front matter.
+{% endcomment %}
+{% if paginator %}
+  {% assign items = paginator.posts %}
+{% else %}
+  {% assign items = site.archives | sort: "weight" %}
+{% endif %}
+
+<!-- Archive index list -->
+<ul class="archive-index">
+  {% for archive in items %}
+    {% include archive-item.html %}
+  {% endfor %}
+</ul>
+{% if paginator %}
+<!-- Pagination links -->
+<div class="pagination">
+  <span class="page_number ">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="paginate-link active previous" title="Previous Page">PREV</a>
+  {% else %}
+    <span class="paginate-link previous">PREV</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="paginate-link active next" title="Next Page">NEXT</a>
+  {% else %}
+    <span class="paginate-link next">NEXT</span>
+  {% endif %}
+</div>
+{% endif %}

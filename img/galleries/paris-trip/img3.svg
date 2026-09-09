@@ -1,0 +1,24 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#fff"/>
+  <!-- small tower in the distance -->
+  <polygon points="680,400 740,400 715,320 705,320" fill="#000"/>
+  <polygon points="705,320 715,320 710,270" fill="#000"/>
+  <!-- waterline -->
+  <line x1="0" y1="400" x2="900" y2="400" stroke="#000" stroke-width="2"/>
+  <!-- bridge arch -->
+  <path d="M120,400 Q450,230 780,400" fill="none" stroke="#000" stroke-width="6"/>
+  <line x1="180" y1="400" x2="180" y2="370" stroke="#000" stroke-width="5"/>
+  <line x1="280" y1="400" x2="280" y2="330" stroke="#000" stroke-width="5"/>
+  <line x1="620" y1="400" x2="620" y2="330" stroke="#000" stroke-width="5"/>
+  <line x1="720" y1="400" x2="720" y2="370" stroke="#000" stroke-width="5"/>
+  <!-- couple silhouette at bridge crest -->
+  <path d="M425,400 L425,345 Q425,330 438,330 Q451,330 451,345 L451,400 Z" fill="#000"/>
+  <circle cx="438" cy="316" r="13" fill="#000"/>
+  <path d="M459,400 L459,350 Q459,338 470,338 Q481,338 481,350 L481,400 Z" fill="#000"/>
+  <circle cx="470" cy="325" r="12" fill="#000"/>
+  <!-- reflection ripples -->
+  <line x1="140" y1="440" x2="260" y2="440" stroke="#000" stroke-width="2" opacity="0.35"/>
+  <line x1="400" y1="460" x2="560" y2="460" stroke="#000" stroke-width="2" opacity="0.35"/>
+  <line x1="620" y1="440" x2="760" y2="440" stroke="#000" stroke-width="2" opacity="0.35"/>
+  <line x1="300" y1="490" x2="480" y2="490" stroke="#000" stroke-width="2" opacity="0.25"/>
+</svg>

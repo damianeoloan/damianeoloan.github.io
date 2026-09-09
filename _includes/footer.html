@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <nav class="footer-nav">
+      {% for link in site.data.nav-links %}
+        <a href="{{ link.url | prepend: site.baseurl }}">
+          {{ link.name | downcase }}
+        </a>
+      {% endfor %}
+    </nav>
+
+    {% if site.search %}
+      {% include search.html %}
+    {% endif %}
+
+    <p class="copyright">{{ site.time | date: '%Y' | prepend: 'Built on Jekyll, ' }}</p>
+</footer>

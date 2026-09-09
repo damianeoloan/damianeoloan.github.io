@@ -1,0 +1,24 @@
+---
+layout: page
+title: Blog
+---
+<!-- Blog post list -->
+<ul class="blog-index">
+  {% for post in paginator.posts %}
+    {% include post-item.html %}
+  {% endfor %}
+</ul>
+<!-- Pagination links -->
+<div class="pagination">
+  <span class="page_number ">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="paginate-link active previous" title="Previous Page">PREV</a>
+  {% else %}
+    <span class="paginate-link previous">PREV</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="paginate-link active next" title="Next Page">NEXT</a>
+  {% else %}
+    <span class="paginate-link next">NEXT</span>
+  {% endif %}
+</div>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#fff"/>
+  <line x1="0" y1="470" x2="900" y2="470" stroke="#000" stroke-width="2"/>
+  <!-- rows of simple chairs -->
+  <g fill="#000">
+    <rect x="130" y="430" width="24" height="40"/>
+    <rect x="180" y="430" width="24" height="40"/>
+    <rect x="230" y="430" width="24" height="40"/>
+    <rect x="646" y="430" width="24" height="40"/>
+    <rect x="696" y="430" width="24" height="40"/>
+    <rect x="746" y="430" width="24" height="40"/>
+  </g>
+  <!-- arch -->
+  <path d="M330,470 L330,260 Q330,180 450,180 Q570,180 570,260 L570,470"
+        fill="none" stroke="#000" stroke-width="10"/>
+  <!-- minimal floral sprigs on the arch -->
+  <circle cx="330" cy="220" r="7" fill="#000"/>
+  <circle cx="345" cy="200" r="5" fill="#000"/>
+  <circle cx="570" cy="220" r="7" fill="#000"/>
+  <circle cx="555" cy="200" r="5" fill="#000"/>
+  <circle cx="450" cy="182" r="8" fill="#000"/>
+  <!-- couple under the arch -->
+  <path d="M418,470 L418,390 Q418,370 434,370 Q450,370 450,390 L450,470 Z" fill="#000"/>
+  <circle cx="434" cy="352" r="15" fill="#000"/>
+  <path d="M452,470 L452,398 Q452,382 466,382 Q480,382 480,398 L480,470 Z" fill="#000"/>
+  <circle cx="466" cy="368" r="14" fill="#000"/>
+</svg>

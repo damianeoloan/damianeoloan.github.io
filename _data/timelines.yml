@@ -1,0 +1,28 @@
+# Timelines, keyed by name. A page or post picks one at the call site:
+#
+#   {% include timeline.html timeline=site.data.timelines.first_timeline %}
+#
+# Keep keys in snake_case - Liquid's dot access can't read a hyphenated key,
+# which would have to be written site.data.timelines["first-timeline"].
+#
+# Events render in the order written here. Nothing is sorted at build time,
+# so this file *is* the running order: an event in the wrong place is fixed
+# here rather than worked around in the template.
+#
+# `date` is free text:
+#   - an unquoted ISO date (2001-01-01) is read by YAML as a real date, so it
+#     gets a formatted display value and a machine-readable <time> element
+#   - anything else is printed exactly as written. Quote it, so YAML doesn't
+#     try to interpret it - this includes a bare year ("2003"), which must be
+#     quoted to stay a string.
+
+first_timeline:
+  title: A title of a first timeline
+  description: A description of a first timeline
+  events:
+    - date: 2001-01-01
+      summary: A summary of a first event.
+    - date: 2002-01-01
+      summary: A summary of a second event.
+    - date: "Summer 2003"
+      summary: A summary of a third event, dated only approximately.

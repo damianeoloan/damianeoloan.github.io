@@ -1,0 +1,22 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="900" fill="#fff"/>
+  <!-- layered mountains behind -->
+  <polygon points="0,560 180,560 90,380" fill="#000" opacity="0.35"/>
+  <polygon points="380,560 600,560 490,360" fill="#000" opacity="0.35"/>
+  <polygon points="140,560 460,560 300,300" fill="#000" opacity="0.6"/>
+  <line x1="0" y1="700" x2="600" y2="700" stroke="#000" stroke-width="2"/>
+  <!-- pine trees -->
+  <g fill="#000">
+    <polygon points="90,700 118,700 104,650"/>
+    <polygon points="94,660 114,660 104,630"/>
+    <polygon points="470,700 500,700 485,645"/>
+    <polygon points="474,655 496,655 485,622"/>
+  </g>
+  <!-- chalet -->
+  <rect x="230" y="620" width="140" height="80" fill="#000"/>
+  <polygon points="215,620 385,620 300,560" fill="#000"/>
+  <rect x="285" y="655" width="30" height="45" fill="#fff"/>
+  <rect x="330" y="580" width="14" height="30" fill="#000"/>
+  <!-- smoke -->
+  <path d="M337,580 Q327,560 340,545 Q350,530 340,512" fill="none" stroke="#000" stroke-width="3"/>
+</svg>

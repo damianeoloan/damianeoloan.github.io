@@ -1,0 +1,20 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="900" fill="#fff"/>
+  <!-- distant peak -->
+  <polygon points="60,600 220,600 140,380" fill="#000" opacity="0.55"/>
+  <!-- main peak -->
+  <polygon points="180,700 560,700 400,220 340,220" fill="#000"/>
+  <polygon points="340,220 400,220 370,150" fill="#000"/>
+  <!-- snow cap accent -->
+  <polygon points="352,260 388,260 370,225" fill="#fff"/>
+  <line x1="0" y1="700" x2="600" y2="700" stroke="#000" stroke-width="2"/>
+  <!-- ski trail down the slope - carved white into the black snow -->
+  <path d="M370,260 Q330,380 390,460 Q440,540 380,620 Q340,660 300,700"
+        fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="10 10"/>
+  <!-- skier silhouette mid-slope, in white against the black peak -->
+  <g transform="translate(390,470) rotate(18)">
+    <circle cx="0" cy="-26" r="9" fill="#fff"/>
+    <path d="M-4,-16 L4,-16 L10,20 L-2,20 L-4,-4 L-14,20 L-22,20 Z" fill="#fff"/>
+    <line x1="-26" y1="24" x2="24" y2="16" stroke="#fff" stroke-width="4"/>
+  </g>
+</svg>

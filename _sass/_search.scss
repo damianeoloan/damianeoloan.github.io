@@ -1,0 +1,86 @@
+/**
+ * Site-wide search (progressive enhancement - see assets/js/site-search.js).
+ * Lives in the footer, centered via .site-footer's own text-align: center
+ * rather than floated/positioned itself.
+ */
+div.site-search {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 $spacing-unit/2;
+
+  input#site-search-input {
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: $base-font-family;
+    font-size: $small-font-size;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid $grey-color;
+    border-radius: 999px;
+    width: 20rem;
+    max-width: 60vw;
+    @include media-query($on-mobile) {
+      width: 14rem;
+    }
+
+    &:disabled {
+      color: $dark-grey-7;
+      background: $grey-color-light;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $accent-color;
+    }
+  }
+}
+
+div.site-search-results {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin-bottom: 0.3rem;
+  background: $white-color;
+  border: 1px solid $grey-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(2, 2, 2, 0.15);
+  max-height: 60vh;
+  overflow-y: auto;
+  text-align: left;
+
+  a.site-search-result {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    font-size: $small-font-size;
+    color: $dark-grey;
+    text-decoration: none;
+    border-bottom: 1px solid $grey-color-light;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: $grey-color-light;
+    }
+  }
+
+  span.site-search-result-type {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: $accent-color;
+  }
+
+  p.site-search-empty {
+    margin: 0;
+    padding: 0.6rem 0.8rem;
+    font-size: $small-font-size;
+    color: $dark-grey-7;
+  }
+}

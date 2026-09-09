@@ -1,0 +1,846 @@
+/**
+ * Site header
+ */
+.site-header {
+  width: 100%;
+  border-top: 0.25rem solid $grey-color;
+  font-family: $title-font-family;
+  background: $dark-grey;
+}
+
+.site-title .site-name {
+    float: left;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 5rem;
+    letter-spacing: 0.18rem;
+    margin-bottom: 0;
+    margin-left: $spacing-unit;
+    color: $accent-color;
+    @include media-query($on-mobile) { margin-left: 1rem;}
+    &:hover {
+      text-decoration: none;
+    }
+}
+
+div.icon-container {
+  display: block;
+  margin: 1rem auto 0;
+  width: 4rem;
+  height: 4rem;
+  margin-right: $spacing-unit;
+  position: relative;
+  @include media-query($on-tablet) { margin-right: 2rem; }
+  @include media-query($on-mobile) { margin-right: 1rem; }
+}
+
+div.icon-container, div.nav-container {
+  > label {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    z-index: 100;
+    > svg {
+      width: 3rem;
+      height: auto;
+      path, rect {
+        fill: $accent-color;
+      }
+    }
+  }
+}
+
+div.icon-container:hover {
+  cursor: pointer;
+}
+
+input#ctrl { display: none; }
+
+div.nav-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(2,2,2,0.9);
+  text-align: center;
+  z-index: 100;
+  label {
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    svg.close-nav {
+      float: right;
+      margin: 1.25rem 4rem auto;
+      @include media-query($on-tablet) { margin-right: 3rem; }
+      @include media-query($on-mobile) { margin-right: 2rem; }
+    }
+  }
+}
+
+nav.menu {
+  clear: both;
+  position: relative;
+  top: 25%;
+  /* The menu's site name is branding, not a section heading - it was an <h1>,
+     which gave every page a second (and on posts a third) top-level heading.
+     As a <p> it needs the heading typography restated: font-family, weight,
+     line-height and letter-spacing would otherwise fall back to body text. */
+  .menu-title {
+    font-family: $title-font-family;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .18rem;
+  }
+  a { font-size: 4.8rem; }
+  .menu-title, a.nav-link:hover, a.nav-link:focus {
+    color: $accent-color;
+  }
+  @include media-query($on-tablet) {
+    .menu-title { font-size: 5rem; }
+    a { font-size: 4rem; }
+  }
+  @include media-query($on-mobile) {
+    .menu-title { font-size: 4rem; }
+    a { font-size: 3.2rem; }
+  }
+}
+
+div.icon-container~div.fullscreen {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 0.5s, opacity 0.5s;
+  transition: visibility 0s 0.5s, opacity 0.5s;
+}
+
+input#ctrl:checked + div.icon-container~div.fullscreen {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+nav.menu a.nav-link {
+  display: block;
+  color: $grey-color;
+  font-size: 5rem;
+  opacity: 0.6;
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+  @include media-query($on-mobile) { font-size: 3.2rem; }
+  &:last-of-type {
+    display: table;
+    margin: 0 auto;
+    padding: 0 5rem $spacing-unit;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+input#ctrl:checked~nav.menu a.page-link {
+  opacity: 1;
+}
+
+/**
+ * Site footer
+ */
+.site-footer {
+    background: $dark-grey;
+    padding: $spacing-unit/2 0;
+    margin: $spacing-unit auto 0;
+    text-align: center;
+    clear: both;
+}
+.footer-container {
+  display: block;
+  width: 66.66666666%;
+  margin: 0 auto;
+  @include media-query($on-mobile) { width: 100%;}
+}
+.footer-heading {
+    margin-bottom: $spacing-unit/2;
+    text-align: center;
+    color: $accent-color;
+}
+nav.footer-nav {
+  margin-bottom: $spacing-unit/2;
+  a {
+    text-decoration: none;
+    color: $grey-color;
+    padding: $spacing-unit/4 $spacing-unit;
+    -webkit-transition: color 250ms ease-in;
+    transition: color 250ms ease-in;
+    &:not(:last-of-type) { border-right: 1px solid $grey-color; }
+    @include media-query($on-mobile) { padding: .1rem 1em; }
+  }
+  a:hover {
+    color: $accent-color;
+  }
+}
+p.copyright {
+  color: $grey-color-dark;
+  font-size: $small-font-size;
+}
+
+/**
+ * Page content
+ */
+.post-list {
+    margin-top: -3rem;
+    background: $white-color;
+    z-index: 2;
+    margin-left: 0;
+    list-style: none;
+    padding: $spacing-unit/2;
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+p.post-meta {
+  display: table;
+  margin: 0 auto $spacing-unit;
+  font-size: $small-font-size;
+  text-align: center;
+  border-bottom: .2rem solid $dark-grey;
+}
+
+/**
+ * Posts
+ */
+header.post-header {
+  margin-bottom: 0;
+}
+
+h1.post-title {
+  text-align: center;
+}
+
+.post-content {
+  display: block;
+  width: 60%;
+  padding: $spacing-unit/2 $spacing-unit;
+  background: $white-color;
+  margin: 0 auto $spacing-unit;
+  li {
+    font-size: $base-font-size;
+  }
+  iframe, img {
+    display: block;
+    margin: 0 auto $spacing-unit;
+  }
+
+  @include media-query($on-mobile) {
+    width: 66.66666666%;
+  }
+}
+
+.post-seq {
+  position: fixed;
+  top: 17.5%;
+  padding: 1.5rem 3rem;
+  background: $white-color;
+  color: $dark-grey;
+  font-size: 2.6rem;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+  @include media-query($on-tablet) {
+    position: inherit;
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+}
+.post-seq:hover, .post-seq:visited {
+  color: $dark-grey;
+  text-decoration: none;
+}
+.previous-post {
+  left: 2%;
+  border-left: 2px solid $accent-color;
+  &:hover { left: 1%; }
+  @include media-query($on-tablet) {
+    margin-left: 10%;
+    &:hover { margin-left: 5%; }
+  }
+}
+.next-post {
+  right: 2%;
+  border-right: 2px solid $accent-color;
+  &:hover { right: 1%; }
+  @include media-query($on-tablet) {
+    float: right;
+    margin-right: 10%;
+    &:hover { margin-right: 5%; }
+  }
+}
+
+/**
+ * Blog index
+ */
+ body.white-page {
+   background-color: $white-color;
+ }
+ ul.blog-index {
+   list-style: none;
+   width: 70%;
+   margin: 0 auto $spacing-unit;
+   z-index: 1;
+   background: $grey-color;
+   @include media-query($on-desktop) { width: 66.66666666%; }
+   @include media-query($on-tablet) { width: 70%; }
+   @include media-query($on-mobile) { width: 90%; }
+   li {
+     position: relative;
+     text-align: left;
+     padding: $spacing-unit;
+     @include media-query($on-mobile) { padding: $spacing-unit/3; }
+     svg.post-meta {
+       width: 12rem;
+       height: 12rem;
+       margin-bottom: $spacing-unit/2;
+       @include media-query($on-tablet) {
+         width: 8rem;
+         height: 8rem;
+         display: block;
+         margin: 0 auto $spacing-unit/2;
+       }
+       text.month, text.year {
+         -webkit-transition: opacity 250ms ease-in;
+         transition: opacity 250ms ease-in;
+       }
+       text.day { font-size: 2.6rem; }
+       text.month { font-size: 1.2rem; }
+       text.year {
+         font-size: 1.2rem;
+         opacity: 0;
+       }
+     }
+     svg.post-meta:hover {
+       text.month {
+         opacity: 0;
+       }
+
+       text.year {
+         opacity: 1;
+       }
+     }
+
+     a.post-link {
+       text-decoration: none;
+     }
+
+     p.timer { font-size: $small-font-size; }
+
+     iframe {
+       @include media-query($on-mobile) {
+         visibility: hidden;
+         height: 0;
+       }
+     }
+
+     iframe, img {
+       display: block;
+       margin: 0 auto;
+     }
+   }
+
+   li:nth-of-type(3n+1) {
+     background: $grey-color;
+     svg.post-meta {
+       circle { fill: $accent-color; }
+       text {
+         font-family: $title-font-family;
+         fill: $grey-color;
+       }
+     }
+
+     h2 {
+       color: $accent-color;
+     }
+
+     a.post-link {
+       color: $dark-grey;
+     }
+   }
+
+   li:nth-of-type(3n+2) {
+     background: $dark-grey;
+     svg.post-meta {
+       circle { fill: $grey-color; }
+       text {
+         font-family: $title-font-family;
+         fill: $dark-grey;
+       }
+     }
+
+     a.post-link {
+       color: $grey-color;
+     }
+
+     h2, p {
+       color: $grey-color;
+     }
+  }
+
+  li:nth-of-type(3n+0) {
+    background: $accent-color;
+    svg.post-meta {
+      circle { fill: $white-color; }
+       text {
+         font-family: $title-font-family;
+         fill: $accent-color;
+       }
+    }
+
+    a.post-link { color: $white-color; }
+
+    p { color: $white-color; }
+  }
+}
+
+/**
+ * Gallery page (CSS Scroll Snap + :target, no JS)
+ */
+
+p.gallery-meta {
+  margin-top: $spacing-unit;
+  font-weight: 300;
+  font-size: $small-font-size;  
+}
+
+div.gallery-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: $spacing-unit;
+}
+
+div.gallery-scroller {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background: $white-color;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+// A "portrait" gallery gets a taller frame so its images aren't
+// squeezed into the default landscape ratio; "landscape" keeps the
+// default 3:2 above. "mixed" uses this same tall frame - not because
+// its images are portrait, but because the frame is one shared box for
+// every slide in the scroller (a single scroll-snap container can't
+// vary its own height per slide without JS), so it has to be tall
+// enough to fit a portrait image up front. Below, object-fit: contain
+// (instead of cover) keeps each image at its own natural ratio inside
+// that fixed frame rather than cropping it to fill - which also means
+// a shorter landscape image is letterboxed and vertically centered,
+// not stretched. Because the frame's height never changes between
+// slides, nothing below/above the gallery shifts as you scroll through
+// a mix of orientations.
+div.gallery-container.orientation-portrait div.gallery-scroller,
+div.gallery-container.orientation-mixed div.gallery-scroller {
+  aspect-ratio: 2 / 3;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+div.gallery-container.orientation-mixed div.gallery-slide img {
+  object-fit: contain;
+}
+
+div.gallery-slide {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+div.gallery-slide-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: $spacing-unit/2;
+  background: linear-gradient(to top, rgba(2, 2, 2, 0.8), transparent);
+  color: $white-color;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+div.gallery-slide:hover .gallery-slide-meta,
+div.gallery-slide:focus-within .gallery-slide-meta {
+  opacity: 1;
+}
+
+a.gallery-prev,
+a.gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgba(2, 2, 2, 0.5);
+  color: $white-color;
+  font-size: 2.4rem;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+a.gallery-prev { left: $spacing-unit/2; }
+a.gallery-next { right: $spacing-unit/2; }
+
+div.gallery-slide:hover .gallery-prev,
+div.gallery-slide:hover .gallery-next,
+a.gallery-prev:focus,
+a.gallery-next:focus {
+  opacity: 1;
+}
+
+div.gallery-slide:target {
+  outline: 3px solid $grey-color-dark;
+  outline-offset: -3px;
+}
+
+div.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-unit/4;
+  margin-top: $spacing-unit/4;
+
+  a.gallery-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $grey-color;
+    border: 1px solid $dark-grey;
+  }
+
+  a.gallery-dot:hover,
+  a.gallery-dot:focus {
+    background: $accent-color;
+  }
+}
+
+/**
+ * Gallery index
+ */
+ul.gallery-index {
+  list-style: none;
+  width: 70%;
+  margin: 0 auto $spacing-unit;
+  z-index: 1;
+  background: $grey-color;
+  @include media-query($on-desktop) { width: 66.66666666%; }
+  @include media-query($on-tablet) { width: 70%; }
+  @include media-query($on-mobile) { width: 90%; }
+  li {
+    position: relative;
+    text-align: left;
+    padding: $spacing-unit;
+    @include media-query($on-mobile) { padding: $spacing-unit/3; }
+
+    img.gallery-thumb {
+      display: block;
+      width: 100%;
+      max-width: 30rem;
+      height: auto;
+      margin-bottom: $spacing-unit/2;
+    }
+
+    a.gallery-link {
+      text-decoration: none;
+    }
+
+    p.gallery-meta {
+      font-size: $small-font-size;
+    }
+  }
+
+  li:nth-of-type(3n+1) {
+    background: $grey-color;
+    h2 { color: $accent-color; }
+    a.gallery-link { color: $dark-grey; }
+  }
+
+  li:nth-of-type(3n+2) {
+    background: $dark-grey;
+    a.gallery-link { color: $grey-color; }
+    h2, p { color: $grey-color; }
+  }
+
+  li:nth-of-type(3n+0) {
+    background: $accent-color;
+    a.gallery-link { color: $white-color; }
+    p { color: $white-color; }
+  }
+}
+
+/**
+ * Archive index
+ */
+ul.archive-index {
+  list-style: none;
+  width: 70%;
+  margin: 0 auto $spacing-unit;
+  z-index: 1;
+  background: $grey-color;
+  @include media-query($on-desktop) { width: 66.66666666%; }
+  @include media-query($on-tablet) { width: 70%; }
+  @include media-query($on-mobile) { width: 90%; }
+  li {
+    position: relative;
+    text-align: left;
+    padding: $spacing-unit;
+    @include media-query($on-mobile) { padding: $spacing-unit/3; }
+
+    a.archive-link {
+      text-decoration: none;
+      h2 {
+        margin-bottom: $spacing-unit;
+      }
+    }
+
+    p.archive-meta {
+      font-size: $small-font-size;
+    }
+  }
+
+  li:nth-of-type(3n+1) {
+    background: $grey-color;
+    h2 { color: $accent-color; }
+    a.archive-link { color: $dark-grey; }
+  }
+
+  li:nth-of-type(3n+2) {
+    background: $dark-grey;
+    a.archive-link { color: $grey-color; }
+    h2, p { color: $grey-color; }
+  }
+
+  li:nth-of-type(3n+0) {
+    background: $accent-color;
+    a.archive-link { color: $white-color; }
+    p { color: $white-color; }
+  }
+}
+
+/**
+ * Archive page items (archive.html)
+ */
+article.tweet {
+  border-top: 1px solid $grey-color;
+  border-bottom: 2px solid $grey-color-dark;
+  padding: $spacing-unit/2;
+  margin-bottom: $spacing-unit;
+  .archive-item-meta {
+    font-size: $small-font-size;
+    .id-link:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+div.pagination {
+  margin: $spacing-unit 30%;
+  @include media-query ($on-mobile) {
+    margin: $spacing-unit 5%;
+  }
+
+  .paginate-link {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    background: $grey-color;
+    font-size: 2.6rem;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .paginate-link.active {
+    color: $accent-color;
+  }
+
+  a.previous, a.next {
+    -webkit-transition: transform 200ms ease-in;
+    -moz-transition: transform 200ms ease-in;
+    transition: transform 200ms ease-in;
+  }
+
+  .previous {
+    border-left: 2px solid $accent-color;
+  }
+
+  .next {
+    float: right;
+    border-right: 2px solid $accent-color;
+  }
+
+  span.page_number {
+    display: block;
+    text-align: center;
+  }
+
+  a.previous:hover {
+    transform: translateX(-1rem);
+  }
+
+  a.next:hover {
+    transform: translateX(1rem);
+  }
+}
+/**
+ * Homepage
+ */
+ section.hero {
+   width: 100%;
+   height: 100vh;
+   background: $dark-grey;
+   color: $white-color;
+   margin: 0;
+   position: relative;
+   div.namecard {
+     text-align: center;
+     padding-top: 20vh;
+     margin: 0 auto 2*$spacing-unit;
+     @include media-query($on-mobile) {
+       padding-top: 10vh;
+       margin: 0 auto $spacing-unit;
+     }
+     img {
+       width: 12.5%;
+       height: auto;
+       border: 2px solid $grey-color;
+       border-radius: 50%;
+       margin: $spacing-unit/2 auto;
+       @include media-query($on-mobile) {
+         width: 25%;
+       }
+     }
+     h1 {
+       font-size: 6rem;
+       color: $accent-color;
+     }
+     h2 {
+       font-weight: 400;
+     }
+   }
+   ul.cta {
+     list-style: none;
+     margin: 0 0 $spacing-unit;
+     position: relative;
+     text-align: center;
+     li {
+       display: inline-block;
+       margin-right: $spacing-unit;
+       @include media-query($on-mobile) { margin-right: 1rem;}
+       &:last-of-type {
+         margin-right: 0;
+       }
+     }
+     a.button {
+       padding: $spacing-unit/2 $spacing-unit;
+       border: 2px solid $white-color;
+       color: $white-color;
+       text-decoration: none;
+       text-align: center;
+       transition: 250ms ease-in;
+       z-index: 1;
+       @include media-query($on-mobile) {
+         padding: $spacing-unit/4 $spacing-unit/2;
+       }
+     }
+     a.button:hover {
+       border: 2px solid $accent-color;
+       color: $accent-color;
+     }
+   }
+ }
+
+ a.home-button {
+   display: table;
+   margin: 0 auto $spacing-unit;
+   border: 2px solid $dark-grey;
+   padding: $spacing-unit/2 $spacing-unit;
+   color: $dark-grey;
+   text-decoration: none;
+   -webkit-transition: all 250ms ease-in;
+   -ms-transition: 250ms ease-in;
+   transition: all 250ms ease-in;
+   &:hover {
+     border: 2px solid $accent-color;
+     color: $accent-color;
+   }
+   &:last-of-type {
+     margin-top: $spacing-unit/2;
+   }
+ }
+
+/**
+ * Timeline
+ *
+ * The space between events is the summary paragraph's own margin-bottom,
+ * part of the site-wide vertical rhythm. Rather than measure that gap and
+ * hardcode a matching height, $timeline-gap sets the paragraph's margin here
+ * and gives the connector its height from the same value, so the line always
+ * spans exactly the space it replaces.
+ */
+$timeline-gap: $spacing-unit;
+
+ol.timeline {
+  margin-left: 0;
+  list-style: none;
+}
+
+.timeline-event {
+  position: relative;
+
+  .timeline-event-summary {
+    margin-bottom: $timeline-gap;
+  }
+
+  /* The paragraph's bottom margin collapses out of the list item, so the gap
+     sits below the item's box - top: 100% starts the line exactly where the
+     empty space begins. */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 2px;
+    height: $timeline-gap;
+    background-color: $dark-grey;
+  }
+
+  /* No trailing line after the final event. */
+  &:last-child::after {
+    content: none;
+  }
+}

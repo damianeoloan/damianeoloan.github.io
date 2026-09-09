@@ -1,0 +1,19 @@
+---
+permalink: /search-index.json
+---
+{% assign first = true %}
+{% capture json_items %}
+{% for post in site.posts %}
+{% unless first %},{% endunless %}{% assign first = false %}
+{"type":"post","title":{{ post.title | jsonify }},"text":{{ post.content | strip_html | strip_newlines | truncate: 300 | jsonify }},"url":{{ post.url | prepend: site.baseurl | jsonify }}}
+{% endfor %}
+{% for archive in site.archives %}
+{% unless first %},{% endunless %}{% assign first = false %}
+{"type":"archive","title":{{ archive.title | jsonify }},"text":{{ archive.content | strip_html | strip_newlines | truncate: 300 | jsonify }},"url":{{ archive.url | prepend: site.baseurl | jsonify }}}
+{% endfor %}
+{% for gallery in site.galleries %}
+{% unless first %},{% endunless %}{% assign first = false %}
+{"type":"gallery","title":{{ gallery.title | jsonify }},"text":{{ gallery.content | strip_html | strip_newlines | truncate: 300 | jsonify }},"url":{{ gallery.url | prepend: site.baseurl | jsonify }}}
+{% endfor %}
+{% endcapture %}
+[{{ json_items }}]

@@ -1,0 +1,12 @@
+{% assign items = include.collection | sort: "weight" %}
+{% for item in items %}
+  {% if item.url == page.url %}{% assign index = forloop.index0 %}{% endif %}
+{% endfor %}
+{% assign prev_index = index | minus: 1 %}
+{% if index > 0 %}
+<a class="post-seq previous-post" href="{{ items[prev_index].url | prepend: site.baseurl }}">PREV<br>{{ include.label | upcase }}</a>
+{% endif %}
+{% assign next_index = index | plus: 1 %}
+{% if next_index < items.size %}
+<a class="post-seq next-post" href="{{ items[next_index].url | prepend: site.baseurl }}">NEXT<br>{{ include.label | upcase }}</a>
+{% endif %}

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 600 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="900" fill="#fff"/>
+  <circle cx="120" cy="90" r="3" fill="#000"/>
+  <circle cx="480" cy="140" r="3" fill="#000"/>
+  <circle cx="220" cy="60" r="2.5" fill="#000"/>
+  <circle cx="400" cy="70" r="2.5" fill="#000"/>
+  <circle cx="150" cy="200" r="2" fill="#000"/>
+  <line x1="0" y1="800" x2="600" y2="800" stroke="#000" stroke-width="2"/>
+  <!-- Eiffel Tower, tall portrait framing -->
+  <polygon points="120,800 480,800 405,650 195,650" fill="#000"/>
+  <polygon points="175,650 425,650 390,600 210,600" fill="#000"/>
+  <polygon points="210,600 390,600 316,250 284,250" fill="#000"/>
+  <polygon points="284,250 316,250 300,80" fill="#000"/>
+  <!-- two small figures at the base, looking up (clear of the tower's own footprint) -->
+  <path d="M70,800 L70,760 Q70,745 83,745 Q96,745 96,760 L96,800 Z" fill="#000"/>
+  <circle cx="83" cy="732" r="12" fill="#000"/>
+  <path d="M520,800 L520,765 Q520,752 531,752 Q542,752 542,765 L542,800 Z" fill="#000"/>
+  <circle cx="531" cy="740" r="11" fill="#000"/>
+</svg>

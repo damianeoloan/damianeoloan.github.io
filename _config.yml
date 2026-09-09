@@ -1,0 +1,48 @@
+# Welcome to damianeoloan.github.io
+#
+# This config file includes settings that affect your whole site,
+# which you set up once and will rarely need to edit after that.
+# This file is not reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: damianeoloan
+search: false # Set to true to render the search box in the footer (see _includes/search.html)
+avatar_path: "/img/avatar.svg" # The location of your homepage avatar
+description: > # this means to ignore newlines until "baseurl:"
+  your free personal website
+baseurl: "" # user site served at the domain root, so no subpath
+url: "https://damianeoloan.github.io" # the base hostname & protocol for your site
+permalink: /:title/
+
+# Build settings
+markdown: kramdown
+
+# Gems
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination
+paginate: 8
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  galleries:
+    title: Image Galleries
+    output: true
+    permalink: /:title
+    # Pagination: update to global config "pagination: {permalink: /page:num/}" if moving to jekyll-paginate-v2
+    # Ordering: this Jekyll version (3.10.0, via the github-pages gem) has no
+    # config-level `order`/`sort_by` support - see each document's `weight`
+    # front matter and the `| sort: "weight"` filter used wherever this
+    # collection is looped (galleries-index.html, collection-nav.html).
+  archives:
+    title: Archives
+    output: true
+    permalink: /:title
+    # Pagination: update to global config "pagination: {permalink: /page:num/}" if moving to jekyll-paginate-v2
+    # Ordering: same as galleries above - see each document's `weight`
+    # front matter and `| sort: "weight"` in archives-index.html and
+    # collection-nav.html.
