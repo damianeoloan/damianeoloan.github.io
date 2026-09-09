@@ -283,9 +283,17 @@ h1.post-title {
    @include media-query($on-desktop) { width: 66.66666666%; }
    @include media-query($on-tablet) { width: 70%; }
    @include media-query($on-mobile) { width: 90%; }
-   li {
+   > li {
      position: relative;
      text-align: left;
+     /* Same rule the archive's article.tweet and the style guide's table
+        use: a light hairline above, a heavier dark rule below. */
+     border-top: 1px solid $grey-color;
+     border-bottom: 2px solid $dark-grey;
+     /* Separation these lists did not need while the li:nth-of-type stripes
+        gave each item its own background colour. With every card white they
+        ran flush together, and the two borders met as one 3px rule. */
+     margin-bottom: var(--spacing-unit);
      padding: var(--spacing-unit);
      @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
      time.post-item-date {
@@ -474,9 +482,17 @@ ul.gallery-index {
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
-  li {
+  > li {
     position: relative;
     text-align: left;
+    /* Same rule the archive's article.tweet and the style guide's table
+       use: a light hairline above, a heavier dark rule below. */
+    border-top: 1px solid $grey-color;
+    border-bottom: 2px solid $dark-grey;
+    /* Separation these lists did not need while the li:nth-of-type stripes
+       gave each item its own background colour. With every card white they
+       ran flush together, and the two borders met as one 3px rule. */
+    margin-bottom: var(--spacing-unit);
     padding: var(--spacing-unit);
     @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
@@ -507,9 +523,17 @@ ul.archive-index {
   @include media-query($on-desktop) { width: 66.66666666%; }
   @include media-query($on-tablet) { width: 70%; }
   @include media-query($on-mobile) { width: 90%; }
-  li {
+  > li {
     position: relative;
     text-align: left;
+    /* Same rule the archive's article.tweet and the style guide's table
+       use: a light hairline above, a heavier dark rule below. */
+    border-top: 1px solid $grey-color;
+    border-bottom: 2px solid $dark-grey;
+    /* Separation these lists did not need while the li:nth-of-type stripes
+       gave each item its own background colour. With every card white they
+       ran flush together, and the two borders met as one 3px rule. */
+    margin-bottom: var(--spacing-unit);
     padding: var(--spacing-unit);
     @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
