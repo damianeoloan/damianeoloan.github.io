@@ -171,7 +171,7 @@ nav.footer-nav {
   }
 }
 p.copyright {
-  color: $grey-color-dark;
+  color: $dark-grey;
   font-size: $small-font-size;
 }
 
@@ -438,7 +438,7 @@ a.gallery-next:focus {
 }
 
 div.gallery-slide:target {
-  outline: 3px solid $grey-color-dark;
+  outline: 3px solid $dark-grey;
   outline-offset: -3px;
 }
 
@@ -531,7 +531,7 @@ ul.archive-index {
  */
 article.tweet {
   border-top: 1px solid $grey-color;
-  border-bottom: 2px solid $grey-color-dark;
+  border-bottom: 2px solid $dark-grey;
   padding: calc(var(--spacing-unit) / 2);
   margin-bottom: var(--spacing-unit);
   .archive-item-meta {
