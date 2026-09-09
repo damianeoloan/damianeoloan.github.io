@@ -9,7 +9,9 @@
 $title-font-family: Inter, Helvetica, sans-serif;
 $base-font-family: Charter, Georgia, serif;
 $base-font-size:   2rem;
-$base-font-weight: 300;
+$base-font-weight: 400;
+$title-font-weight: 400; // 400 and 700 are the only weights with a real face
+                        // in every family these stacks can land on - see below
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
 

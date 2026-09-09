@@ -11,9 +11,8 @@
 .site-title .site-name {
     float: left;
     font-size: 2.6rem;
-    font-weight: 300;
+    font-weight: $title-font-weight;
     line-height: 5rem;
-    letter-spacing: 0.18rem;
     margin-bottom: 0;
     margin-left: var(--spacing-unit);
     color: $accent-color;
@@ -86,13 +85,12 @@ nav.menu {
   /* The menu's site name is branding, not a section heading - it was an <h1>,
      which gave every page a second (and on posts a third) top-level heading.
      As a <p> it needs the heading typography restated: font-family, weight,
-     line-height and letter-spacing would otherwise fall back to body text. */
+     and line-height would otherwise fall back to body text. */
   .menu-title {
     font-family: $title-font-family;
     font-size: 6rem;
-    font-weight: 700;
+    font-weight: $title-font-weight;
     line-height: 1.2;
-    letter-spacing: .18rem;
   }
   a { font-size: 4.8rem; }
   .menu-title {
@@ -330,7 +328,7 @@ h1.post-title {
 
 p.gallery-meta {
   margin-top: var(--spacing-unit);
-  font-weight: 300;
+  font-weight: $base-font-weight;
   font-size: $small-font-size;  
 }
 
@@ -646,7 +644,7 @@ div.pagination {
        color: $accent-color;
      }
      h2 {
-       font-weight: 400;
+       font-weight: $title-font-weight;
      }
    }
    ul.cta {
