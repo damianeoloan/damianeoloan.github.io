@@ -39,12 +39,9 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit;
+    margin-bottom: var(--spacing-unit);
 }
 
-@include media-query($on-desktop) { $spacing-unit: 2.8rem; }
-@include media-query($on-tablet) { $spacing-unit: 2.4rem; }
-@include media-query($on-mobile) { $spacing-unit: 1.5rem; }
 /**
  * Images
  */
@@ -66,7 +63,7 @@ figcaption {
  * Lists
  */
 ul, ol {
-  margin-left: $spacing-unit/2;
+  margin-left: calc(var(--spacing-unit) / 2);
 }
 
 li {
@@ -82,7 +79,7 @@ dl {
   padding: 0 0 1.5rem;
   dt { font-family: $title-font-family; }
   dd {
-    margin-left: $spacing-unit;
+    margin-left: var(--spacing-unit);
     font-style: italic;
   }
 }
@@ -96,7 +93,7 @@ ul.grid-container {
  * Tables
  */
 table {
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   * {
     padding: .2rem .5rem;
   }
@@ -117,7 +114,7 @@ table {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: $spacing-unit;
+  margin-bottom: var(--spacing-unit);
   font-family: $title-font-family;
 }
 h1 {
@@ -250,10 +247,10 @@ blockquote {
   display: block;
   max-width: 66.66666666%;
   border-left: 4px solid $dark-grey;
-  padding-left: $spacing-unit;
+  padding-left: var(--spacing-unit);
   font-size: 3.6rem;
   letter-spacing: -1px;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   @include media-query($on-tablet) { max-width: 80%; }
   @include media-query($on-mobile) { max-width: 90%; }
   > :last-child {
@@ -283,7 +280,7 @@ pre {
   background: $grey-color;
   font-size: $small-font-size;
   padding: 1rem 1.6rem;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   text-align: left;
   overflow-x: auto;
   > code {
@@ -296,20 +293,18 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (var(--spacing-unit) * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: var(--spacing-unit);
+    padding-left: var(--spacing-unit);
     position: relative;
     @extend %clearfix;
 
     @include media-query($on-tablet) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        max-width:         calc(#{$content-width} - (var(--spacing-unit)));
+        padding-right: calc(var(--spacing-unit) / 2);
+        padding-left: calc(var(--spacing-unit) / 2);
     }
 }
 /**

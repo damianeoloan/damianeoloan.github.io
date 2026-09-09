@@ -15,7 +15,7 @@
     line-height: 5rem;
     letter-spacing: 0.18rem;
     margin-bottom: 0;
-    margin-left: $spacing-unit;
+    margin-left: var(--spacing-unit);
     color: $accent-color;
     @include media-query($on-mobile) { margin-left: 1rem;}
     &:hover {
@@ -28,7 +28,7 @@ div.icon-container {
   margin: 1rem auto 0;
   width: 4rem;
   height: 4rem;
-  margin-right: $spacing-unit;
+  margin-right: var(--spacing-unit);
   position: relative;
   @include media-query($on-tablet) { margin-right: 2rem; }
   @include media-query($on-mobile) { margin-right: 1rem; }
@@ -135,7 +135,7 @@ nav.menu a.nav-link {
   &:last-of-type {
     display: table;
     margin: 0 auto;
-    padding: 0 5rem $spacing-unit;
+    padding: 0 5rem var(--spacing-unit);
     border-bottom: 1px solid $accent-color;
   }
 }
@@ -149,8 +149,8 @@ input#ctrl:checked~nav.menu a.page-link {
  */
 .site-footer {
     background: $dark-grey;
-    padding: $spacing-unit/2 0;
-    margin: $spacing-unit auto 0;
+    padding: calc(var(--spacing-unit) / 2) 0;
+    margin: var(--spacing-unit) auto 0;
     text-align: center;
     clear: both;
 }
@@ -161,16 +161,16 @@ input#ctrl:checked~nav.menu a.page-link {
   @include media-query($on-mobile) { width: 100%;}
 }
 .footer-heading {
-    margin-bottom: $spacing-unit/2;
+    margin-bottom: calc(var(--spacing-unit) / 2);
     text-align: center;
     color: $accent-color;
 }
 nav.footer-nav {
-  margin-bottom: $spacing-unit/2;
+  margin-bottom: calc(var(--spacing-unit) / 2);
   a {
     text-decoration: none;
     color: $grey-color;
-    padding: $spacing-unit/4 $spacing-unit;
+    padding: calc(var(--spacing-unit) / 4) var(--spacing-unit);
     -webkit-transition: color 250ms ease-in;
     transition: color 250ms ease-in;
     &:not(:last-of-type) { border-right: 1px solid $grey-color; }
@@ -194,15 +194,15 @@ p.copyright {
     z-index: 2;
     margin-left: 0;
     list-style: none;
-    padding: $spacing-unit/2;
+    padding: calc(var(--spacing-unit) / 2);
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: var(--spacing-unit);
     }
 }
 
 p.post-meta {
   display: table;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   font-size: $small-font-size;
   text-align: center;
   border-bottom: .2rem solid $dark-grey;
@@ -222,15 +222,15 @@ h1.post-title {
 .post-content {
   display: block;
   width: 60%;
-  padding: $spacing-unit/2 $spacing-unit;
+  padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
   background: $white-color;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   li {
     font-size: $base-font-size;
   }
   iframe, img {
     display: block;
-    margin: 0 auto $spacing-unit;
+    margin: 0 auto var(--spacing-unit);
   }
 
   @include media-query($on-mobile) {
@@ -289,7 +289,7 @@ h1.post-title {
  ul.blog-index {
    list-style: none;
    width: 70%;
-   margin: 0 auto $spacing-unit;
+   margin: 0 auto var(--spacing-unit);
    z-index: 1;
    background: $grey-color;
    @include media-query($on-desktop) { width: 66.66666666%; }
@@ -298,17 +298,17 @@ h1.post-title {
    li {
      position: relative;
      text-align: left;
-     padding: $spacing-unit;
-     @include media-query($on-mobile) { padding: $spacing-unit/3; }
+     padding: var(--spacing-unit);
+     @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
      svg.post-meta {
        width: 12rem;
        height: 12rem;
-       margin-bottom: $spacing-unit/2;
+       margin-bottom: calc(var(--spacing-unit) / 2);
        @include media-query($on-tablet) {
          width: 8rem;
          height: 8rem;
          display: block;
-         margin: 0 auto $spacing-unit/2;
+         margin: 0 auto calc(var(--spacing-unit) / 2);
        }
        text.month, text.year {
          -webkit-transition: opacity 250ms ease-in;
@@ -409,7 +409,7 @@ h1.post-title {
  */
 
 p.gallery-meta {
-  margin-top: $spacing-unit;
+  margin-top: var(--spacing-unit);
   font-weight: 300;
   font-size: $small-font-size;  
 }
@@ -419,7 +419,7 @@ div.gallery-container {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding-bottom: $spacing-unit;
+  padding-bottom: var(--spacing-unit);
 }
 
 div.gallery-scroller {
@@ -484,7 +484,7 @@ div.gallery-slide-meta {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: $spacing-unit/2;
+  padding: calc(var(--spacing-unit) / 2);
   background: linear-gradient(to top, rgba(2, 2, 2, 0.8), transparent);
   color: $white-color;
   opacity: 0;
@@ -515,8 +515,8 @@ a.gallery-next {
   transition: opacity 0.3s ease-in;
 }
 
-a.gallery-prev { left: $spacing-unit/2; }
-a.gallery-next { right: $spacing-unit/2; }
+a.gallery-prev { left: calc(var(--spacing-unit) / 2); }
+a.gallery-next { right: calc(var(--spacing-unit) / 2); }
 
 div.gallery-slide:hover .gallery-prev,
 div.gallery-slide:hover .gallery-next,
@@ -533,8 +533,8 @@ div.gallery-slide:target {
 div.gallery-dots {
   display: flex;
   justify-content: center;
-  gap: $spacing-unit/4;
-  margin-top: $spacing-unit/4;
+  gap: calc(var(--spacing-unit) / 4);
+  margin-top: calc(var(--spacing-unit) / 4);
 
   a.gallery-dot {
     width: 1rem;
@@ -556,7 +556,7 @@ div.gallery-dots {
 ul.gallery-index {
   list-style: none;
   width: 70%;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   z-index: 1;
   background: $grey-color;
   @include media-query($on-desktop) { width: 66.66666666%; }
@@ -565,15 +565,15 @@ ul.gallery-index {
   li {
     position: relative;
     text-align: left;
-    padding: $spacing-unit;
-    @include media-query($on-mobile) { padding: $spacing-unit/3; }
+    padding: var(--spacing-unit);
+    @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
     img.gallery-thumb {
       display: block;
       width: 100%;
       max-width: 30rem;
       height: auto;
-      margin-bottom: $spacing-unit/2;
+      margin-bottom: calc(var(--spacing-unit) / 2);
     }
 
     a.gallery-link {
@@ -610,7 +610,7 @@ ul.gallery-index {
 ul.archive-index {
   list-style: none;
   width: 70%;
-  margin: 0 auto $spacing-unit;
+  margin: 0 auto var(--spacing-unit);
   z-index: 1;
   background: $grey-color;
   @include media-query($on-desktop) { width: 66.66666666%; }
@@ -619,13 +619,13 @@ ul.archive-index {
   li {
     position: relative;
     text-align: left;
-    padding: $spacing-unit;
-    @include media-query($on-mobile) { padding: $spacing-unit/3; }
+    padding: var(--spacing-unit);
+    @include media-query($on-mobile) { padding: calc(var(--spacing-unit) / 3); }
 
     a.archive-link {
       text-decoration: none;
       h2 {
-        margin-bottom: $spacing-unit;
+        margin-bottom: var(--spacing-unit);
       }
     }
 
@@ -659,8 +659,8 @@ ul.archive-index {
 article.tweet {
   border-top: 1px solid $grey-color;
   border-bottom: 2px solid $grey-color-dark;
-  padding: $spacing-unit/2;
-  margin-bottom: $spacing-unit;
+  padding: calc(var(--spacing-unit) / 2);
+  margin-bottom: var(--spacing-unit);
   .archive-item-meta {
     font-size: $small-font-size;
     .id-link:hover {
@@ -670,9 +670,9 @@ article.tweet {
 }
 
 div.pagination {
-  margin: $spacing-unit 30%;
+  margin: var(--spacing-unit) 30%;
   @include media-query ($on-mobile) {
-    margin: $spacing-unit 5%;
+    margin: var(--spacing-unit) 5%;
   }
 
   .paginate-link {
@@ -729,17 +729,17 @@ div.pagination {
    div.namecard {
      text-align: center;
      padding-top: 20vh;
-     margin: 0 auto 2*$spacing-unit;
+     margin: 0 auto calc(var(--spacing-unit) * 2);
      @include media-query($on-mobile) {
        padding-top: 10vh;
-       margin: 0 auto $spacing-unit;
+       margin: 0 auto var(--spacing-unit);
      }
      img {
        width: 12.5%;
        height: auto;
        border: 2px solid $grey-color;
        border-radius: 50%;
-       margin: $spacing-unit/2 auto;
+       margin: calc(var(--spacing-unit) / 2) auto;
        @include media-query($on-mobile) {
          width: 25%;
        }
@@ -754,19 +754,19 @@ div.pagination {
    }
    ul.cta {
      list-style: none;
-     margin: 0 0 $spacing-unit;
+     margin: 0 0 var(--spacing-unit);
      position: relative;
      text-align: center;
      li {
        display: inline-block;
-       margin-right: $spacing-unit;
+       margin-right: var(--spacing-unit);
        @include media-query($on-mobile) { margin-right: 1rem;}
        &:last-of-type {
          margin-right: 0;
        }
      }
      a.button {
-       padding: $spacing-unit/2 $spacing-unit;
+       padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
        border: 2px solid $white-color;
        color: $white-color;
        text-decoration: none;
@@ -774,7 +774,7 @@ div.pagination {
        transition: 250ms ease-in;
        z-index: 1;
        @include media-query($on-mobile) {
-         padding: $spacing-unit/4 $spacing-unit/2;
+         padding: calc(var(--spacing-unit) / 4) calc(var(--spacing-unit) / 2);
        }
      }
      a.button:hover {
@@ -786,9 +786,9 @@ div.pagination {
 
  a.home-button {
    display: table;
-   margin: 0 auto $spacing-unit;
+   margin: 0 auto var(--spacing-unit);
    border: 2px solid $dark-grey;
-   padding: $spacing-unit/2 $spacing-unit;
+   padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
    color: $dark-grey;
    text-decoration: none;
    -webkit-transition: all 250ms ease-in;
@@ -799,20 +799,18 @@ div.pagination {
      color: $accent-color;
    }
    &:last-of-type {
-     margin-top: $spacing-unit/2;
+     margin-top: calc(var(--spacing-unit) / 2);
    }
  }
 
 /**
  * Timeline
  *
- * The space between events is the summary paragraph's own margin-bottom,
- * part of the site-wide vertical rhythm. Rather than measure that gap and
- * hardcode a matching height, $timeline-gap sets the paragraph's margin here
- * and gives the connector its height from the same value, so the line always
- * spans exactly the space it replaces.
+ * The space between events is the summary paragraph's own margin-bottom, part
+ * of the site-wide vertical rhythm. Both the margin and the connector's height
+ * read --spacing-unit directly, so the line always spans exactly the space it
+ * replaces - now at every breakpoint, since the two shrink together.
  */
-$timeline-gap: $spacing-unit;
 
 ol.timeline {
   margin-left: 0;
@@ -823,7 +821,7 @@ ol.timeline {
   position: relative;
 
   .timeline-event-summary {
-    margin-bottom: $timeline-gap;
+    margin-bottom: var(--spacing-unit);
   }
 
   /* The paragraph's bottom margin collapses out of the list item, so the gap
@@ -835,7 +833,7 @@ ol.timeline {
     top: 100%;
     left: 0;
     width: 2px;
-    height: $timeline-gap;
+    height: var(--spacing-unit);
     background-color: $dark-grey;
   }
 

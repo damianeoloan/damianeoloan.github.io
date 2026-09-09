@@ -13,7 +13,6 @@ $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
 
-$spacing-unit:     3rem;
 // Color palette
 $accent-color:       #1DA1F2;
 
@@ -39,8 +38,8 @@ $on-desktop:       1020px;
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
+//         padding-right: calc(var(--spacing-unit) / 2);
+//         padding-left: calc(var(--spacing-unit) / 2);
 //     }
 // }
 @mixin media-query($device) {
@@ -48,6 +47,23 @@ $on-desktop:       1020px;
         @content;
     }
 }
+
+// Spacing scale.
+//
+// A CSS custom property rather than a Sass variable, because the media queries
+// below have to change it at runtime. Sass variables are substituted at compile
+// time, so a variable reassigned inside a media query cannot affect a rule that
+// already consumed it - the previous attempt at this (three reassignments of
+// $spacing-unit in _base.scss) emitted no CSS at all, and every margin stayed
+// at 3rem on every screen size. Custom properties are resolved by the browser,
+// so these overrides genuinely apply.
+//
+// The breakpoints are all max-width and overlap, so the narrowest matching rule
+// must come last.
+:root { --spacing-unit: 3rem; }
+@include media-query($on-desktop) { :root { --spacing-unit: 2.8rem; } }
+@include media-query($on-tablet)  { :root { --spacing-unit: 2.4rem; } }
+@include media-query($on-mobile)  { :root { --spacing-unit: 1.5rem; } }
 
 
 

@@ -6,7 +6,7 @@
 div.site-search {
   position: relative;
   display: inline-block;
-  margin: 0 0 $spacing-unit/2;
+  margin: 0 0 calc(var(--spacing-unit) / 2);
 
   input#site-search-input {
     box-sizing: border-box;
