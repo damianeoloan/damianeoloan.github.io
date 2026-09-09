@@ -14,11 +14,10 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.8;
 
 // Color palette
-$accent-color:       #1DA1F2;
+$accent-color:       #1756a9; // the site's single blue: 7.02:1 on $white-color (AA and AAA for body
+                                //  text), and 1.9:1 against $dark-grey body text so links stay distinguishable
 
 $white-color:      #fdfdfd;
-$blue-color:       #2a7ae2;
-$navy-color:       #070b2e;
 $yellow-color:     #fff13c;
 $red-color:        #e0021f;
 $grey-color:       #e5e5e5;

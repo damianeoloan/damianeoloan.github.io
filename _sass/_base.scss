@@ -227,15 +227,13 @@ p, span, figcaption, ol li, ul li {
  * Links
  */
 a {
-color: $blue-color;
+color: $accent-color;
 text-decoration: none;
 
-  &:visited {
-    color: darken($blue-color, 15%);
-  }
-
+  /* No :visited variant - the site converged on one blue, and this was the
+     colour it converged on. Hover is distinguished by the underline. */
   &:hover {
-    color: $blue-color;
+    color: $accent-color;
     text-decoration: underline;
   }
 }

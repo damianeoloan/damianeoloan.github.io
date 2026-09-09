@@ -40,8 +40,6 @@ div.icon-container, div.nav-container {
     position: absolute;
     left: 0;
     top: 0;
-    -webkit-transition: opacity 0.5s ease-in;
-    transition: opacity 0.5s ease-in;
     z-index: 100;
     > svg {
       width: 3rem;
@@ -97,7 +95,7 @@ nav.menu {
     letter-spacing: .18rem;
   }
   a { font-size: 4.8rem; }
-  .menu-title, a.nav-link:hover, a.nav-link:focus {
+  .menu-title {
     color: $accent-color;
   }
   @include media-query($on-tablet) {
@@ -126,11 +124,11 @@ input#ctrl:checked + div.icon-container~div.fullscreen {
 
 nav.menu a.nav-link {
   display: block;
-  color: $dark-grey;
+  /* One colour in every state, undimmed and untransitioned. The dimmed
+     resting state and its opacity fade were removed deliberately - do not
+     reintroduce opacity here without rechecking contrast. */
+  color: $accent-color;
   font-size: 5rem;
-  opacity: 0.6;
-  -webkit-transition: opacity 0.5s ease-in;
-  transition: opacity 0.5s ease-in;
   @include media-query($on-mobile) { font-size: 3.2rem; }
   &:last-of-type {
     display: table;
@@ -138,10 +136,6 @@ nav.menu a.nav-link {
     padding: 0 5rem var(--spacing-unit);
     border-bottom: 1px solid $accent-color;
   }
-}
-
-input#ctrl:checked~nav.menu a.page-link {
-  opacity: 1;
 }
 
 /**
@@ -167,17 +161,13 @@ input#ctrl:checked~nav.menu a.page-link {
 }
 nav.footer-nav {
   margin-bottom: calc(var(--spacing-unit) / 2);
+  /* Same single colour as the overlay's nav links, in every state. */
   a {
     text-decoration: none;
-    color: $dark-grey;
+    color: $accent-color;
     padding: calc(var(--spacing-unit) / 4) var(--spacing-unit);
-    -webkit-transition: color 250ms ease-in;
-    transition: color 250ms ease-in;
     &:not(:last-of-type) { border-right: 1px solid $grey-color; }
     @include media-query($on-mobile) { padding: .1rem 1em; }
-  }
-  a:hover {
-    color: $accent-color;
   }
 }
 p.copyright {
@@ -247,8 +237,6 @@ h1.post-title {
   font-size: 2.6rem;
   text-decoration: none;
   line-height: 1.5;
-  -webkit-transition: all 250ms ease-in;
-  transition: all 250ms ease-in;
   @include media-query($on-tablet) {
     position: inherit;
     display: inline-block;
@@ -505,8 +493,6 @@ ul.gallery-index {
     }
   }
 
-
-
 }
 
 /**
@@ -537,8 +523,6 @@ ul.archive-index {
       font-size: $small-font-size;
     }
   }
-
-
 
 }
 
@@ -670,25 +654,6 @@ div.pagination {
        border: 2px solid $accent-color;
        color: $accent-color;
      }
-   }
- }
-
- a.home-button {
-   display: table;
-   margin: 0 auto var(--spacing-unit);
-   border: 2px solid $dark-grey;
-   padding: calc(var(--spacing-unit) / 2) var(--spacing-unit);
-   color: $dark-grey;
-   text-decoration: none;
-   -webkit-transition: all 250ms ease-in;
-   -ms-transition: 250ms ease-in;
-   transition: all 250ms ease-in;
-   &:hover {
-     border: 2px solid $accent-color;
-     color: $accent-color;
-   }
-   &:last-of-type {
-     margin-top: calc(var(--spacing-unit) / 2);
    }
  }
 
