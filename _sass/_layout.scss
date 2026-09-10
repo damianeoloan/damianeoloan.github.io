@@ -155,7 +155,7 @@ nav.menu a.nav-link {
 .footer-heading {
     margin-bottom: calc(var(--spacing-unit) / 2);
     text-align: center;
-    color: $accent-color;
+    color: $dark-grey;
 }
 nav.footer-nav {
   margin-bottom: calc(var(--spacing-unit) / 2);
@@ -194,6 +194,13 @@ p.post-meta {
   font-size: $small-font-size;
   text-align: center;
   border-bottom: .2rem solid $dark-grey;
+
+  /* The base rule sets a font-size on `span` itself, which beats inheritance -
+     so the author name came out at 2.2rem beside a 1.75rem date. Everything in
+     this line takes the line's own size. */
+  span {
+    font-size: inherit;
+  }
 }
 
 /**
