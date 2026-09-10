@@ -746,7 +746,11 @@ ol.timeline {
 
   /* The paragraph's bottom margin collapses out of the list item, so the gap
      sits below the item's box - top: 100% starts the line exactly where the
-     empty space begins. */
+     empty space begins.
+
+     This background-color draws a 2px LINE, not a surface. A sweep that set
+     every background to $white-color once made it invisible rather than
+     removing it - it must stay dark. */
   &::after {
     content: "";
     position: absolute;
@@ -754,7 +758,7 @@ ol.timeline {
     left: 0;
     width: 2px;
     height: var(--spacing-unit);
-    background-color: $white-color;
+    background-color: $dark-grey;
   }
 
   /* No trailing line after the final event. */
