@@ -562,6 +562,28 @@ article.tweet {
       text-decoration: none;
     }
   }
+
+  /* "In reply to: someone" - the archive stores the handle without the @, and
+     it is context rather than content, so it sits above the text and quiet. */
+  .tweet-reply-to {
+    margin-bottom: calc(var(--spacing-unit) / 4);
+    font-size: $small-font-size;
+  }
+
+  /* Attachments stack in a single column rather than forming a gallery. The
+     cap is on width only, so portrait images keep their aspect ratio. */
+  .tweet-media {
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    img,
+    video {
+      display: block;
+      width: 100%;
+      max-width: 30rem;
+      height: auto;
+      margin-bottom: calc(var(--spacing-unit) / 4);
+      &:last-child { margin-bottom: 0; }
+    }
+  }
 }
 
 div.pagination {

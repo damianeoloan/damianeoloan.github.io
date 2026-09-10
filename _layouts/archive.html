@@ -24,13 +24,39 @@ layout: default
   {% if archive_data %}
   <section class="archive-container">
     {% for item in archive_data %}
-    <article class="tweet" id="{% if item.tweet %}{{ item.tweet.id_str }}{% elsif item.data %}{{ item.data.id }}{% endif %}">
+    <article class="tweet" id="{% if item.tweet %}{{ item.tweet.id_str }}{% elsif item.data %}{{ item.data.id | default: item.data.index }}{% endif %}">
       {% if item.tweet %}
-        <p>{{ item.tweet.full_text }}</p>
+        {%- comment -%}
+          full_text arrives HTML-escaped by Twitter (&amp; and no bare angle
+          brackets), so link markup can be built into it and printed unescaped.
+          Media t.co links are stripped rather than linked: the image renders
+          directly below, and Twitter's own display drops them too.
+        {%- endcomment -%}
+        {%- assign text = item.tweet.full_text -%}
+        {%- for m in item.tweet.media -%}
+          {%- assign text = text | replace: m.url, "" -%}
+        {%- endfor -%}
+        {%- for u in item.tweet.urls -%}
+          {%- capture link -%}<a href="{{ u.expanded_url }}"><span class="tweet-link">Twitter Link</span></a>{%- endcapture -%}
+          {%- assign text = text | replace: u.url, link -%}
+        {%- endfor -%}
+        {% if item.tweet.in_reply_to_screen_name %}
+        <p class="tweet-reply-to">In reply to: {{ item.tweet.in_reply_to_screen_name }}</p>
+        {% endif %}
+        <p>{{ text | strip }}</p>
+        {% if item.tweet.media %}
+        <div class="tweet-media">
+          {%- for m in item.tweet.media %}
+          {% if m.type == 'photo' %}<img src="{{ site.baseurl }}/img/archives/{{ page.slug }}/{{ m.file }}" alt="Attachment from this post" loading="lazy" decoding="async">
+          {% else %}<video src="{{ site.baseurl }}/img/archives/{{ page.slug }}/{{ m.file }}" controls preload="none"></video>{% endif %}
+          {%- endfor %}
+        </div>
+        {% endif %}
         <p class="archive-item-meta">{{ item.tweet.created_at | date: "%-d %b %Y" }} &middot; {{ item.tweet.favorite_count }} likes &middot; {{ item.tweet.retweet_count }} retweets &middot <a href="{{ item.tweet.id_str | prepend: '#' | prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
       {% elsif item.data %}
+        {% if item.data.link_title %}<p class="tweet-reply-to">In reply to: {{ item.data.link_title }}</p>{% endif %}
         <p>{{ item.data.body }}</p>
-        <p class="archive-item-meta">{{ item.data.created_utc | date: "%-d %b %Y" }} &middot; r/{{ item.data.subreddit }} &middot; {{ item.data.score }} points &middot; <a href="{{ item.data.id | prepend: '#' |  prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
+        <p class="archive-item-meta">{% if item.data.created_utc %}{{ item.data.created_utc | date: "%-d %b %Y" }} &middot; {% endif %}{% if item.data.subreddit %}r/{{ item.data.subreddit }} &middot; {% endif %}{% if item.data.score %}{{ item.data.score }} points &middot; {% endif %}{% if item.data.index %}#{{ item.data.index }} &middot; {% endif %}<a href="{{ item.data.id | default: item.data.index | prepend: '#' |  prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
       {% endif %}
     </article>
     {% endfor %}
