@@ -1,5 +1,5 @@
 <header class="site-header">
-    {% unless page.url == '/' %}<a class="site-title" href="{{ site.baseurl }}/"><span class="site-name">{{ site.title }}</span></a>{% endunless %}
+    {% unless page.url == '/' %}<a class="site-title" href="{{ site.baseurl }}/"><span class="site-name">{{ site.display_name }}</span></a>{% endunless %}
     <input id="ctrl" name="ctrl" type="checkbox"></input>
     <div class="icon-container">
       <label for="ctrl">
@@ -31,7 +31,7 @@
             </svg>
         </label>
         <nav class="menu">
-          <p class="menu-title">{{ site.title }}</p>
+          <p class="menu-title">{{ site.display_name }}</p>
           {% for link in site.data.nav-links %}
             {% if link.name %}
               <a class="nav-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.name }}</a>
