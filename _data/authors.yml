@@ -1,0 +1,13 @@
+# Site authors, keyed by the id used in a post's front matter:
+#
+#   author: claude              -> Claude
+#   authors: [claude, site-author]  -> Claude & Site Author
+#
+# A post naming no author shows none - there is no default, so an unattributed
+# post stays unattributed rather than being silently credited to someone.
+
+claude:
+  name: Claude
+
+site-author:
+  name: Site Author

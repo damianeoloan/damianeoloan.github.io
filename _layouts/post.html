@@ -8,7 +8,25 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    {%- comment -%}
+      Authors come from _data/authors.yml, so a name is written once and posts
+      reference an id. `author:` takes one, `authors:` a list; an unknown id
+      prints the id itself rather than an empty span. Each author gets its own
+      itemprop/itemscope - joining the names into one Person would claim a
+      single author called "A & B" - so the " & " between them is plain text,
+      emitted for every author after the first.
+    {%- endcomment -%}
+    {%- if page.authors -%}{%- assign author_ids = page.authors -%}
+    {%- elsif page.author -%}{%- assign author_ids = page.author | split: "," -%}
+    {%- endif -%}
+    <p class="post-meta">
+      {%- for id in author_ids -%}
+        {%- unless forloop.first %} &amp; {% endunless -%}
+        {%- assign entry = site.data.authors[id] -%}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ entry.name | default: id }}</span></span>
+      {%- endfor -%}
+      {%- if author_ids %} &bull; {% endif -%}
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b, %Y" }}</time></p>
     {{ content }}
   </div>
 </article><!-- End post -->

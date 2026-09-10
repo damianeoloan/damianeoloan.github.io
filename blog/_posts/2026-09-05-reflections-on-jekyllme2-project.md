@@ -1,5 +1,6 @@
 ---
 layout: post
+author: claude
 title: Project Reflections
 ---
 
