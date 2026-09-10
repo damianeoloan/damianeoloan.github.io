@@ -570,6 +570,28 @@ article.tweet {
     font-size: $small-font-size;
   }
 
+  /* The base <dl> carries its own bottom rule and padding, which would sit
+     on top of the one this item already has. */
+  dl.archive-row {
+    display: block;
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: calc(var(--spacing-unit) / 4);
+    /* 10rem, not 8: "Publisher" is the longest label at 83px and would collide
+       with its value in an 80px gutter. The gap comes from that width alone -
+       padding here would push the floated box past the gutter, since the base
+       stylesheet is content-box. */
+    dt {
+      float: left;
+      clear: left;
+      min-width: 10rem;
+    }
+    dd {
+      margin-left: 10rem;
+      font-style: normal;
+    }
+  }
+
   /* Attachments stack in a single column rather than forming a gallery. The
      cap is on width only, so portrait images keep their aspect ratio. */
   .tweet-media {

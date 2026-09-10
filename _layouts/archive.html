@@ -20,11 +20,15 @@ layout: default
     keeps working even if a future collection mixes formats within one
     file.
   {% endcomment %}
-  {% assign archive_data = site.data[page.slug][page.slug] %}
+  {%- comment -%}
+    JSON archives live at _data/<slug>/<slug>.json; a CSV one is parsed
+    straight into site.data.<slug>, so fall back to that.
+  {%- endcomment -%}
+  {% assign archive_data = site.data[page.slug][page.slug] | default: site.data[page.slug] %}
   {% if archive_data %}
   <section class="archive-container">
     {% for item in archive_data %}
-    <article class="tweet" id="{% if item.tweet %}{{ item.tweet.id_str }}{% elsif item.data %}{{ item.data.id | default: item.data.index }}{% endif %}">
+    <article class="tweet" id="{% if item.tweet %}{{ item.tweet.id_str }}{% elsif item.data %}{{ item.data.id | default: item.data.index }}{% else %}{{ forloop.index }}{% endif %}">
       {% if item.tweet %}
         {%- comment -%}
           full_text arrives HTML-escaped by Twitter (&amp; and no bare angle
@@ -57,6 +61,20 @@ layout: default
         {% if item.data.link_title %}<p class="tweet-reply-to">In reply to: {{ item.data.link_title }}</p>{% endif %}
         <p>{{ item.data.body }}</p>
         <p class="archive-item-meta">{% if item.data.created_utc %}{{ item.data.created_utc | date: "%-d %b %Y" }} &middot; {% endif %}{% if item.data.subreddit %}r/{{ item.data.subreddit }} &middot; {% endif %}{% if item.data.score %}{{ item.data.score }} points &middot; {% endif %}{% if item.data.index %}#{{ item.data.index }} &middot; {% endif %}<a href="{{ item.data.id | default: item.data.index | prepend: '#' |  prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
+      {% else %}
+        {%- comment -%}
+          A flat row - no wrapper key, so it is rendered as its own key/value
+          pairs rather than through a fixed field list. Empty cells are skipped:
+          only 42 of 359 rows carry a publisher, and 13 have no author.
+        {%- endcomment -%}
+        <dl class="archive-row">
+          {% if item.item %}<dt>Item</dt><dd>{{ item.item }}</dd>{% endif %}
+          {% if item.author %}<dt>Author</dt><dd>{{ item.author }}</dd>{% endif %}
+          {% if item.title %}<dt>Title</dt><dd>{{ item.title }}</dd>{% endif %}
+          {% if item.isbn %}<dt>ISBN</dt><dd>{{ item.isbn }}</dd>{% endif %}
+          {% if item.publisher %}<dt>Publisher</dt><dd>{{ item.publisher }}</dd>{% endif %}
+        </dl>
+        <p class="archive-item-meta">Box {{ item.box }} &middot; <a href="{{ forloop.index | prepend: '#' | prepend: page.url | prepend: site.baseurl }}" class="id-link">&#x1F517;</a></p>
       {% endif %}
     </article>
     {% endfor %}
