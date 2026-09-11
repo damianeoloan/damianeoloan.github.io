@@ -182,6 +182,9 @@ p.copyright {
 /**
  * Page content
  */
+main.page-content {
+  @include media-query($on-mobile) { margin-top: var(--spacing-unit); }
+}
 .post-list {
     margin-top: -3rem;
     background: $white-color;
