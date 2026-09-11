@@ -43,6 +43,6 @@ term
 </div>
 {% endhighlight %}
 
-`{% raw %}{% for cat in site.cats %}{% endraw %}`
+`{% raw %}{{ include site.cat }}{% endraw %}`
 
 [^1]: This is a footnote.

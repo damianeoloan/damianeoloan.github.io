@@ -271,6 +271,7 @@ code {
   font-size: $small-font-size;
   padding: .15em .4em;
   border-radius: 3px;
+  @include media-query($on-mobile) {padding: 0;}
 }
 pre {
   line-height: 1.5;
@@ -280,6 +281,7 @@ pre {
   margin: 0 auto var(--spacing-unit);
   text-align: left;
   overflow-x: auto;
+  @include media-query($on-mobile) {padding: 0;}
   > code {
     padding: 0;
     border-radius: 0;

@@ -189,6 +189,7 @@ p.copyright {
     margin-left: 0;
     list-style: none;
     padding: calc(var(--spacing-unit) / 2);
+    @include media-query($on-mobile) {padding: 0;}
     > li {
         margin-bottom: var(--spacing-unit);
     }
@@ -235,7 +236,7 @@ h1.post-title {
   }
 
   @include media-query($on-mobile) {
-    width: 66.66666666%;
+    width: 80%;
   }
 }
 
