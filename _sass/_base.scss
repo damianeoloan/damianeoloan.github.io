@@ -10,6 +10,10 @@ dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
+hr {
+  border: 2px solid $dark-grey;
+}
+
 /**
  * Basic styling
  */
@@ -249,7 +253,10 @@ blockquote {
   font-size: 3.6rem;
   margin: 0 auto var(--spacing-unit);
   @include media-query($on-tablet) { max-width: 80%; }
-  @include media-query($on-mobile) { max-width: 90%; }
+  @include media-query($on-mobile) {
+    max-width: 90%;
+    p { padding-left: var(--spacing-unit); }
+  }
   > :last-child {
     margin-bottom: 0;
   }
@@ -257,7 +264,7 @@ blockquote {
     content: '"';
     position: absolute;
     top: -1.3rem;
-    left: .5rem;
+    left: 0.5rem;
     font-family: $sans-font-family;
     font-size: 5rem;
     color: $accent-color;
