@@ -44,14 +44,31 @@ layout: default
           {%- capture link -%}<a href="{{ u.expanded_url }}"><span class="tweet-link">Twitter Link</span></a>{%- endcapture -%}
           {%- assign text = text | replace: u.url, link -%}
         {%- endfor -%}
+        {%- comment -%}
+          Replies to this account (in_reply_to_user_id_str matches the
+          archive's account_id) link the name to the parent tweet on this
+          page; in_reply_to_status_id_str was dropped at conversion for the
+          few whose parent was deleted before export, so they get no link.
+          Replies to other accounts keep the name as plain text and add the
+          same "Twitter Link" used in tweet bodies, pointing at the id-only
+          x.com URL - a renamed handle cannot break it.
+        {%- endcomment -%}
         {% if item.tweet.in_reply_to_screen_name %}
-        <p class="tweet-reply-to">In reply to: {{ item.tweet.in_reply_to_screen_name }}</p>
+        <p class="tweet-reply-to">In reply to:
+          {%- if item.tweet.in_reply_to_user_id_str == page.account_id -%}
+            {%- if item.tweet.in_reply_to_status_id_str %} <a href="{{ item.tweet.in_reply_to_status_id_str | prepend: '#' | prepend: page.url | prepend: site.baseurl }}">{{ item.tweet.in_reply_to_screen_name }}</a>
+            {%- else %} {{ item.tweet.in_reply_to_screen_name }}
+            {%- endif -%}
+          {%- else %} {{ item.tweet.in_reply_to_screen_name }}
+            {%- if item.tweet.in_reply_to_status_id_str %} <a href="https://x.com/i/status/{{ item.tweet.in_reply_to_status_id_str }}"><span class="tweet-link">Twitter Link</span></a>{% endif -%}
+          {%- endif -%}
+        </p>
         {% endif %}
         <p>{{ text | strip }}</p>
         {% if item.tweet.media %}
         <div class="tweet-media">
           {%- for m in item.tweet.media %}
-          {% if m.type == 'photo' %}<img src="{{ site.baseurl }}/img/archives/{{ page.slug }}/{{ m.file }}" alt="Attachment from this post" loading="lazy" decoding="async">
+          {% if m.type == 'photo' %}<a href="{{ site.baseurl }}/img/archives/{{ page.slug }}/{{ m.file }}"><img src="{{ site.baseurl }}/img/archives/{{ page.slug }}/{{ m.file }}" alt="Attachment from this post" loading="lazy" decoding="async"></a>
           {% else %}<video src="{{ site.baseurl }}/img/archives/{{ page.slug }}/{{ m.file }}" controls preload="none"></video>{% endif %}
           {%- endfor %}
         </div>

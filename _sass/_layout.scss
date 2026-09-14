@@ -582,6 +582,10 @@ article.tweet {
   .tweet-reply-to {
     margin-bottom: calc(var(--spacing-unit) / 4);
     font-size: $small-font-size;
+    /* The "Twitter Link" span after a reply to another account: the base
+       span rule sets its own size, so it takes the line's size here as in
+       p.post-meta. */
+    span { font-size: inherit; }
   }
 
   /* The base <dl> carries its own bottom rule and padding, which would sit
@@ -610,14 +614,25 @@ article.tweet {
      cap is on width only, so portrait images keep their aspect ratio. */
   .tweet-media {
     margin-bottom: calc(var(--spacing-unit) / 2);
-    img,
+    /* Each photo links to its own file, which is the full size the export
+       provides (Twitter caps archive images at 1200px on the long edge).
+       The anchor, not the image, carries the column sizing: as a block of
+       the image's own width it can't draw a stray underline fragment, and
+       nothing beside the image is clickable. */
+    a,
     video {
       display: block;
       width: 100%;
       max-width: 30rem;
       height: auto;
-      margin-bottom: calc(var(--spacing-unit) / 4);
+      margin: 0 auto calc(var(--spacing-unit) / 4);
       &:last-child { margin-bottom: 0; }
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
     }
   }
 }
