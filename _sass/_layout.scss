@@ -63,7 +63,7 @@ div.nav-container {
   left: 0;
   top: 0;
   background: $white-color;
-  font-family: $title-font-family;
+  font-family: $sans-font-family;
   text-align: center;
   z-index: 100;
   > nav.menu > p {
@@ -92,7 +92,7 @@ nav.menu {
      As a <p> it needs the heading typography restated: font-family, weight,
      and line-height would otherwise fall back to body text. */
   .menu-title {
-    font-family: $title-font-family;
+    font-family: $sans-font-family;
     font-size: 6rem;
     font-weight: $title-font-weight;
     line-height: 1.2;
@@ -172,7 +172,7 @@ nav.footer-nav {
     &:not(:last-of-type) { border-right: 1px solid $grey-color; }
     @include media-query($on-mobile) { padding: .1rem 1em; }
   }
-  font-family: $title-font-family;
+  font-family: $sans-font-family;
 }
 p.copyright {
   color: $dark-grey;

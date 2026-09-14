@@ -77,7 +77,7 @@ dl {
   display: table;
   border-bottom: 2px solid $dark-grey;
   padding: 0 0 1.5rem;
-  dt { font-family: $title-font-family; }
+  dt { font-family: $sans-font-family; }
   dd {
     margin-left: var(--spacing-unit);
     font-style: italic;
@@ -102,7 +102,7 @@ table {
     /* A column label, so it takes the title family like dt does - without
        this it inherits the body serif, and the UA's default bold leaves it
        the only 700 anywhere on the site. */
-    font-family: $title-font-family;
+    font-family: $sans-font-family;
     font-weight: $title-font-weight;
   }
   th, td {
@@ -120,7 +120,7 @@ table {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: var(--spacing-unit);
-  font-family: $title-font-family;
+  font-family: $sans-font-family;
   font-weight: $title-font-weight;
 }
 h1 {
@@ -258,7 +258,7 @@ blockquote {
     position: absolute;
     top: -1.3rem;
     left: .5rem;
-    font-family: $title-font-family;
+    font-family: $sans-font-family;
     font-size: 5rem;
     color: $accent-color;
   }
