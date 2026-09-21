@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "Reddit: u/damianoloan"  # Required, string
-weight: 3  # Required, integer
+weight: 4  # Required, integer
 source: Reddit
 time-period:
   start: "~2014"
