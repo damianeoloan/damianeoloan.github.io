@@ -7,7 +7,7 @@
 # post stays unattributed rather than being silently credited to someone.
 
 claude:
-  name: Claude
+  name: "Claude"
 
-site-author:
-  name: Site Author
+damianeoloan:
+  name: "Damian E. O'Loan"
