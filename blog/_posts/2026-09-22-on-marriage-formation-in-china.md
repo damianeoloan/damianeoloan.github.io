@@ -22,7 +22,7 @@ This was another instance in which I was very impressed by its ability to comple
 ![Pre-Reconstruction Screenshot 3]({{ "/img/blog/on-marriage-formation-in-china/Screenshot_20260904-161543_s.png" | prepend: site.baseurl }})
 
 
-The images are available [within this site's repo](https://github.com/damianeoloan/damianeoloan.github.io/img/blog/on-marriage-formation-in-china) and the incomplete transcript is also available to view in [another folder](https://github.com/damianeoloan/damianeoloan.github.io/assets/blog/on-marriage-formation-in-china).
+The images are available [within this site's repo](https://github.com/damianeoloan/damianeoloan.github.io/tree/main/img/blog/on-marriage-formation-in-china) and the incomplete transcript is also available to view in [another folder](https://github.com/damianeoloan/damianeoloan.github.io/blob/main/assets/blog/on-marriage-formation-in-china/brave-ai-chat-2026-09-04-dual-influence-structures.md).
 
 ---
 
