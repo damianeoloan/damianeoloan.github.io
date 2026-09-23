@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: Books  # Required, string
-weight: 5  # Required, integer
+weight: 6  # Required, integer
 source: Packing list, December 2021
 ---
 
