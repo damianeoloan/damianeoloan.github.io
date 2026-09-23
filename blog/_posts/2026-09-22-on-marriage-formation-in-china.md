@@ -32,7 +32,7 @@ The initial question was to ask whether everybody received a free bicycle in Chi
 
 The significance of the bicycle at that time was its inclusion as one the "Three Bigs" or 三大件, along with a wristwatch and sewing machine, which opened the door to marriage.
 
-The arrangement made me pause for a moment, because the possibility immediately emerged of a lack of harmony between the individuals staffing the senior danwei posts and the those in the licensing agency. I firstly confirmed that, at that time, the danwei was indeed primarily responsible for marriage formation. An individual could be allocated to any danwei anywhere, and once there, could be allocated to any role. If the individual was seen to further Party objectives, he or she could be rewarded with the possibility of a desirable partner. If not, it would be arranged otherwise.
+The arrangement made me pause for a moment, because the possibility immediately emerged of a lack of harmony between the individuals staffing the senior danwei posts and those in the licensing agency. I firstly confirmed that, at that time, the danwei was indeed primarily responsible for marriage formation. An individual could be allocated to any danwei anywhere, and once there, could be allocated to any role. If the individual was seen to further Party objectives, he or she could be rewarded with the possibility of a desirable partner. If not, it would be arranged otherwise.
 
 I then explored the transition from the Confucian model to the Party model. The image below contains an explanation of the formal structure of marriage as it was then, based on monogamous relationships within the clan but early adopting a taboo against cousin marriage. It is significant that Chinese culture was, and has been, recorded as such, because the Party would go on to attempt to create a narrative whereby collective marriage has always been in practice. Contemporary Chinese dramas often portray such events anachronistically, in a vain attempt at synthesis of Marxism and Confucianism based on the suppression of the content of the latter with the addition of certain fabricated forms.
 
@@ -60,7 +60,7 @@ My thoughts then, as now, were that when you marry a person, you marry their gov
 
 She was very unhappy and moved back to her village. When I contacted her again a month or two later, she had already been married. I assume this was the fate she was trying to avoid by being in the city living as an independent woman. She refused to talk any more, saying it was now inappropriate, and as such we lost contact. I don't know who arranged her marriage but I would expect her family to have been too poor to influence the local Party branch in its objectives.
 
-## Romance as an alien concept
+## Harmonious homogeneity
 
 It strikes me as odd that Western discourse on intra-cultural relationships aren't based on reasonable, accurate assumptions.
 
