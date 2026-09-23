@@ -46,7 +46,7 @@ We now have two tensions: the original tension between the family as the entity 
 
 I prompted the AI to assume that the latter tension was not an oversight and to explore it. Initially, it explored the former and ascribed it to a 'divide-and-rule' strategy whereby the family could be blamed for a bad match but the Party take credit for a good match. When explicitly prompted, it did speculate on motives underlying the latter tension, and in a convincing manner. It pointed to the creation of a patronage reservoir for the danwei by creating a false scarcity, a filter system that could be denied by central Party agencies, a "designed channel" of corruption and a subtle means of maintaining central Party control over both consumption and relationship outcomes.
 
-The exchange moved on to the subject of algorithmic dating, and the AI model was willing to acknowledge the Party's role in the leading Chinese tech companies providing this service. The same plausible deniability was listed as a motivation: the Party maintains control of whom has access to whom, and a false belief is generated among the users of the apps in their own agency and ability to control the outcomes.
+The exchange moved on to the subject of algorithmic dating, and the AI model was willing to acknowledge the Party's role in the leading Chinese tech companies providing this service. The same plausible deniability was listed as a motivation: the Party maintains control of who has access to whom, and a false belief is generated among the users of the apps in their own agency and ability to control the outcomes.
 
 ## A personal experience
 

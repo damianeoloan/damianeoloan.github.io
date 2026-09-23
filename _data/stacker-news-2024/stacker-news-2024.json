@@ -1,0 +1,443 @@
+[
+ {"data": {
+  "index": 1,
+  "created_utc": "2024/04/14",
+  "body": "I've been lurking and prowling outside for a long time now, but I finally signed up and now here I am inside getting cosy. It's a beautiful thing you've all created.",
+  "parent": "504229",
+  "comment_id":"505036",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 2,
+  "created_utc": "2024/04/14",
+  "body": "This is among the regular threads I enjoy most. The last book I read was Fyodor Dostoevsky's The Idiot.\n\nIf you've never read anything by Dostoevsky, it's a great place to start. It's also a novel that would suit anyone interested in staying humble during a bull market, which was part of my reason for picking it up again after a few decades. If you've read perhaps his most famous work, The Brothers Karamazov, the protagonist resembles Alyosha more than any of his other characters.\n\nThe Idiot, Prince Myshkin, is the last of his aristocratic line, penniless when we meet him on his way back from an unsuccessful attempt to cure his epilepsy in Switzerland. He's naive and childish in the most charming way possible. He describes himself as an invalid unsuited to marriage, but has soon proposed to two women: one an angel and the other a demon, each unforgettable in her own way.\n\nI was lucky to find an old Dent hardback from around a century ago, and this time I read it very slowly over the course of a month, every page a pleasure.",
+  "parent": "504375",
+  "comment_id":"505043",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 3,
+  "created_utc": "2024/04/14",
+  "body": "Trying to stop me prowl the territories would be like herding cats, no limits here.",
+  "parent": "504229",
+  "comment_id":"505199",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 4,
+  "created_utc": "2024/04/14",
+  "body": "Thank you, cowboy!",
+  "parent": "504229",
+  "comment_id":"505200",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 5,
+  "created_utc": "2024/04/14",
+  "body": "Curiousity does get the better of us sometimes and lead to reckless bar sitting, but as you know there's more security in laying low under the table.",
+  "parent": "504229",
+  "comment_id":"505447",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 6,
+  "created_utc": "2024/04/16",
+  "body": "Has there been any discussion here of the issues using Core Lightning's pay command?\n\nI'm finding it impossible to have payments routed, even very small.\n\nSome more information via this page: https://github.com/ElementsProject/lightning/issues/7219 <https://github.com/ElementsProject/lightning/issues/7219>",
+  "parent": "507476",
+  "comment_id":"508196",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 7,
+  "created_utc": "2024/04/16",
+  "body": "I'll add a bit more detail, in case it's relevant to anyone:\n\n* payments were fine until a few weeks ago\n* amounts up to $100 were going through without any problem\n* started to experience very occasional failures, no discernable patterns\n* checked my channels, all appear to be healthy\n* failures more frequent a few weeks ago\n* recently updated, not a single successful payment since\n* tried small payments today (2500-20000 sats) to two big nodes (SN, Bitrefill), no way through\n* tried experimental renepay plugin, same problem then quickly crashed\n* error is 210 on both pay and renepay, messages include WIRE_INCORRECT_CLTV_EXPIRY, \"failreason\": \"We don't have any channels\"\n* nothing unusual using decodepay",
+  "parent": "507476",
+  "comment_id":"508225",
+  "reply_to_user": "self",
+  "reply_to_index": 6
+  }
+ },
+ {"data": {
+  "index": 8,
+  "created_utc": "2024/04/17",
+  "body": "And to update one last time, this seems ok now after sorting out the new update. I think it was gossip related too as mentioned in an Issue.",
+  "parent": "507476",
+  "comment_id":"508724",
+  "reply_to_user": "self",
+  "reply_to_index": 7
+  }
+ },
+ {"data": {
+  "index": 9,
+  "created_utc": "2024/04/16",
+  "body": "Firstly, I assure you that wasn't bait set in the hope of a reply like this from your good self.\n\nI am aware of your arguments, and somewhat convinced, but I'll tell you my approach and logic.\n\nPutting aside the relative merits and the issue of money as opposed to credit, I'll turn to the unit of account aspect. I first discussed getting used to a new unit of account with people in the Eurozone when they lost their national currencies.\n\nFor the most part, they would say there was a kind of stealthy inflation imposed by many retailers around the switchover, that for some time they would always convert back like people on holiday do, and over time they would gradually stop. There were some interesting exceptions like visiting a retailer they hadn't been to for a long time and since the change.\n\nWhen I started to use bitcoin, I felt a similar process was underway and quite relaxed about it. I have a sense of prices of some things in sats very effortlessly. For larger amounts, I think in bitcoin more easily, though with more effort, a bit like speaking a foreign language.\n\nI find not forcing a change in my way of thinking makes the process more pleasurable and I quite enjoy feeling aware of the gradual shift. I don't take steroids to force a change quickly either, both decisions feel quite similar to me.\n\nRegarding the money vs credit issue, it shows up clearly when you have a look at old invoices and match them up to that shift in how natural it comes. I do consider gold as money as well and broadly agree with what Alasdair Macleod says on the subject in his research notes of late.\n\nTheir retailer has pricing in both money and credit on the product page <https://mene.com/bands/gold/mene-classic-band-gold> with updates every few seconds. I think it a good example for retailers who accept bitcoin, and that they're relaxed about it too because they know the debt-based figure is only going one way.",
+  "parent": "507476",
+  "comment_id":"508335",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 10,
+  "created_utc": "2024/04/13",
+  "body": "Nayib Bukele's stroke of political genius was to realise the potential in how the Salvadoran presidential election calendar coincided with Bitcoin's halving cycle.\n\nI don't doubt his understanding of his electorate and that he viewed Chivo, or something like it, as necessary to roll out his plan. He will have known for years now that it was fragile and poorly built, even if it has improved over time. It has caused serious reputational damage - I wouldn't expect another nation state to imitate him on that front, but it's worth thinking about what he understood that made it seem essential and how better it could be achieved.",
+  "parent": "515483",
+  "comment_id":"516267",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 11,
+  "created_utc": "2024/04/24",
+  "body": "What does it mean to be a \"realest\" person?\n\nThe quote means nothing because it hinges on a word that's used meaninglessly. Like so many words and expressions that are coined and quickly forgotten, it exists to signal being part of some group rather than to communicate. Based, or something.\n\nIf it were an existential concept aimed at describing some kind of Sartrean fulfillment, it wouldn't be communicated using that word.\n\nIt vaguely suggests retaining elements of black ghetto culture when you become wealthy through rap music. Real talk, keep it real, fr fr. - it's all nonsense.",
+  "parent": "516244",
+  "comment_id":"516600",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 12,
+  "created_utc": "2024/04/24",
+  "body": "Comparing 3137 and 3215, the latter is basically a duplicate issue submitted intentionally, i.e. spam.\n\nAs regards 344399, you're attempting to have a dev team remove something that's useful for other users. I think it's generous of them not to have blocked you from their repo.",
+  "parent": "516797",
+  "comment_id":"516920",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 13,
+  "created_utc": "2024/04/24",
+  "body": "It doesn't even deserve another comment on 3137, let alone a new issue.\n\n344399 is just ridiculous, wasting valuable dev time.",
+  "parent": "516797",
+  "comment_id":"516948",
+  "reply_to_user": "self",
+  "reply_to_index": 12
+  }
+ },
+ {"data": {
+  "index": 14,
+  "created_utc": "2024/04/24",
+  "body": "2898.\n\nThere's an adjective for your approach - talking frequently and aggressively, thereby drowning out other voices, attempting to browbeat others into following your orders, purity spirals - 'bolshy'.\n\nA lot of people don't take kindly to bolsheviks. They tend to be destructive.",
+  "parent": "516797",
+  "comment_id":"517030",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 15,
+  "created_utc": "2024/04/24",
+  "body": "Probably not worth its own thread at the moment, but this is worth keeping an eye on:\n\nhttps://www.theregister.com/2024/04/24/us_commerce_china_risc_v_investigation/ <https://www.theregister.com/2024/04/24/us_commerce_china_risc_v_investigation/> The United States Department of Commerce is reportedly considering lawmakers' calls to make it harder for China to use the RISC-V instruction set architecture (ISA).\n\n\"While the benefits of open source collaboration on RISC-V promise to be significant, it can only be realized when contributors are working with the sole aim of improving the technology, and not aiding the geopolitical interests of the PRC,\" the representatives wrote in a November 2023 letter that called for creation of a \"robust ecosystem for open source collaboration among the US and our allies while ensuring the PRC is unable to benefit from that work.\"\n\nIt's not clear what actions might or even could be taken. Their potential effectiveness is also debatable, as US tech bans haven't stopped China importing banned GPUs, while various actors have developed numerous evasion routes to bring banned tech into the Middle Kingdom.\n\nAs you can see here <https://bitcoincore.org/bin/bitcoin-core-27.0/>, Bitcoin Core for RISC-V architecture is now a regular part of the release schedule and I was considering it for my next node. If anyone is running one already, I'd be interested to hear how it's going.",
+  "parent": "516688",
+  "comment_id":"517111",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 16,
+  "created_utc": "2024/04/24",
+  "body": "Lending money to people on low incomes and/or in severe poverty is an interesting problem, one which hasn't been well solved. From micro-credit in the third world to pay-day loans in the West, even if it starts well you can reasonably expect controversy and to end up being smeared.\n\nIt's not something I would consider, but I do have some sympathy for those who, in good faith, try to deliver a good product in that sector.",
+  "parent": "516688",
+  "comment_id":"517126",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 17,
+  "created_utc": "2024/04/24",
+  "body": "Here <https://yougov.co.uk/topics/politics/survey-results/daily/2023/09/21/1b024/1>'s something similar from the UK, 09/23 by YouGov.\n\nOf the prime minister's five key priorities, which is the most important to you?\n\nThe options are reducing inflation, encouraging growth, reducing national debt, cutting health service waiting times, stopping illegal immigration.\n\nAmong all surveyed, reducing inflation is joint first with cutting waiting times. But among the 18-24 demographic, reducing inflation is head and shoulders above everything else with 46% of all responses.\n\nIt's also seen as more important by females, with males opting more for encouraging growth.\n\nDisclaimer: YouGov usually seems more like an opinion influencer than a pollster, so all to be taken with a big pinch of salt.",
+  "parent": "516943",
+  "comment_id":"517208",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 18,
+  "created_utc": "2024/04/24",
+  "body": "Tickets to the Bitcoin OG Museum are going to be really expensive.",
+  "parent": "516688",
+  "comment_id":"517270",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 19,
+  "created_utc": "2024/04/24",
+  "body": "I'm looking at buying a property in the UK at some point. I expected to be forced through the usual KYC/AML routine by a solicitor of my choice, and already had concerns about that. My plan was to use one based in another city, big enough that they wouldn't look twice at my affairs or go home and tell their friends about them.\n\nHowever, I learned that not only do I need to go through my entire financial situation with a solicitor, but also the seller's estate agent. That's because the unelected FATF and the communistic UK decided agents could be a brick in the wall of their totalitarian surveillance society:\n\nEstate Agency businesses do not commonly handle the funds used to buy a property.  However, they are a key facilitator in a property sale and come into contact with both parties to the transaction at an early stage and are in an ideal position to identify suspicious activity.\n\nI don't want to live in a big city. This leaves me forced to reveal my hodling to a small-town estate agent with no experience in professional confidentiality and a penchant for gossip.\n\nIt's a direct threat to my personal security, counter-productive and highly dangerous legislation, and forcing me to re-consider the whole plan.",
+  "parent": "516750",
+  "comment_id":"517401",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 20,
+  "created_utc": "2024/04/24",
+  "body": "Good question. In fact, that would be considered suspicious:\n\n\"the way the client comes to the business affects the risk for:\n\nis the client a company, partnership, or trust; are there complex or opaque business ownership structures in place? That is, any client which is a legal person, owned by another legal person. For example, a limited company owned by a beneficial owner indirectly, through another legal entity\"\n\nThe guidance then instructs agents as follows:\n\n\"identifying all beneficial owners of the customer and taking reasonable measures to verify their identity to satisfy yourself that you know who they are\"\n\nAnd then you're back to square one, except with a bigger workload. There seems to be no way to mitigate the threat, although I haven't taken legal advice yet.",
+  "parent": "516750",
+  "comment_id":"517433",
+  "reply_to_user": "self",
+  "reply_to_index": 19
+  }
+ },
+ {"data": {
+  "index": 21,
+  "created_utc": "2024/04/24",
+  "body": "I'll just add this to show how direct the threat can be.\n\nFortunately, I'm not looking in Northern Ireland. If I were, I'd be looking in a place where the government is led by the political wing of the still-intact IRA.\n\n\"On 20 December 2004, a total of £26.5 million in cash was stolen from the headquarters of Northern Bank on Donegall Square West in Belfast, Northern Ireland. Having taken family members of two bank officials hostage, an armed gang forced the workers to help them steal used and unused pound sterling banknotes.\"\n\nhttps://en.wikipedia.org/wiki/Northern_Bank_robbery <https://en.wikipedia.org/wiki/Northern_Bank_robbery>\n\nNobody was brought to justice, but it's widely acknowledged to be the work of the IRA. Extortion and racketeering continue to be part of the fabric of life there. They are active in the property industry as in all others.  And you're forced, by law, to reveal to them your entire financial situation.",
+  "parent": "516750",
+  "comment_id":"517472",
+  "reply_to_user": "self",
+  "reply_to_index": 20
+  }
+ },
+ {"data": {
+  "index": 22,
+  "created_utc": "2024/04/25",
+  "body": "Not to split hairs, but I think the Wright cases were more directly linked to the COPA mission. I don't see the relation to intellectual property in the Samourai case, although I'm open to correction on that.\n\nThere is also the Bitcoin Legal Defense Fund <https://bitcoindefense.org/donation/>, which could be more appropriate. It exists as a 501(c)(3) tax-exempt charitable organisation - is there something similar in any other countries?",
+  "parent": "517907",
+  "comment_id":"518318",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 23,
+  "created_utc": "2024/04/25",
+  "body": "*the Wright cases were and are\n\nApologies to hodlonaut and anyone else who continues to be harrassed by Wright.",
+  "parent": "517907",
+  "comment_id":"518318",
+  "reply_to_user": "self",
+  "reply_to_index": 22
+  }
+ },
+ {"data": {
+  "index": 24,
+  "created_utc": "2024/04/25",
+  "body": "Poll reveals 62% of respondents think Bitcoin is a scam. <https://
+stacker.news/items/518296>bitcoin <https://stacker.news/~bitcoin>\n\nI like the dynamic on ZeroHedge, where for nearly ten years now it's been consistently open to the merits of Bitcoin as an investment thesis if nothing else, and its readership no less consistently cites all the 'arguments' you mention and sticks to gold.\n\nYet they haven't changed their editorial line to please their readers or advertisers, and the readers haven't stopped reading. Agreement to disagree, not respectfully in the least, but consistently on all sides.",
+  "parent": "518296",
+  "comment_id":"518725",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 25,
+  "created_utc": "2024/04/25",
+  "body": "Stranger things have happened.\n\nhttp://trilema.com/2014/ill-pay-for-your-tits/",
+  "parent": "518686",
+  "comment_id":"518782",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 26,
+  "created_utc": "2024/04/25",
+  "body": "This was a great episode, I hope it receives the attention it deserves. I'll just draw out one part that struck me from the transcript at your link:\n\nMatt\nNow, you know, that needs to be on the roadmap in the very short term because we're in such a bad place right now. And I you know, I think the Bitcoin community needs to start thinking about what the long term plan is here if miners don't start taking these options.\n\nMarty\nYeah. What hash function would you would you prefer to use?\n\nMatt\nHonestly, just leave SHA256, but use a 64-bit timestamp. Let's just fix the timestamp issue. Keep SHA256. Who cares? And well yeah, we'll just brick all the miners and replace them with new ones.\n\nhttps://rumble.com/v4r6o42-501-bitcoin-mining-pools-are-critically-centralized-with-matt-corallo.html?start=2936 <https://rumble.com/v4r6o42-501-bitcoin-mining-pools-are-critically-centralized-with-matt-corallo.html?start=2936>\n\nThe next questions sensibly included the concern that it could lead to another monopoly/dominance issue, given the timing and the announcement of a new 'mining system'. At any rate, a cartel forming doesn't look as likely as some healthy competition.",
+  "parent": "518549",
+  "comment_id":"518963",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 27,
+  "created_utc": "2024/04/26",
+  "body": "This is shocking. That it's come to this shows how afraid US elected representatives are of the FBI and CIA.\n\nThese 'security services', including MI5, MI6 and GCHQ, are out of control and more dangerous than any external threat.",
+  "parent": "519526",
+  "comment_id":"520041",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 28,
+  "created_utc": "2024/04/26",
+  "body": "That's all good advice.\n\nhttps://www.etymonline.com/search?q=shock <https://www.etymonline.com/search?q=shock>",
+  "parent": "504229",
+  "comment_id":"505036",
+  "reply_to_user": "self",
+  "reply_to_index": 27
+  }
+ },
+ {"data": {
+  "index": 29,
+  "created_utc": "2024/04/26",
+  "body": "Setup looks fine today, a bit worried about certain people but very calm.\n\n\"version\": 270000,\n\"subversion\": \"/Satoshi:27.0.0/\",\n\"networkactive\": true,\n\"connections\": 36,\n\"connections_in\": 26,\n\"connections_out\": 10\n\nIt's like a big hug every time I check getnetworkinfo.",
+  "parent": "519526",
+  "comment_id":"520305",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 30,
+  "created_utc": "2024/04/26",
+  "body": "I feel somewhat obliged to reply as I mentioned this risk here a few days ago.\n\nFirstly, I'm much more concerned about rapidly progressing totalitarian technocracy, with the Chinese social credit system now in place, CBDCs under a frenetic pace of development and an absence of constitutional protections in almost every country apart from the US.\n\nI think if someone wanted to target you, a much more likely attack vector would seem completely innocent to the victim, like the case of the Bettencourt family:\n\n\"At the root of the family dispute was the alleged abuse of Bettencourt’s weakness by society photographer Francois-Marie Banier, who had been given “gifts” by the billionaire totalling millions of euros. The guardianship order would be recognition that Bettencourt, 88, is incapable of managing her own finances.\"\n\nhttps://www.france24.com/en/20110608-loreal-heiress-scandal-france-paris-bettencourt-inheritance-court <https://www.france24.com/en/20110608-loreal-heiress-scandal-france-paris-bettencourt-inheritance-court>\n\nA fairly standard investment scam also seems a likely approach.\n\nKidnapping and direct theft of an asset as challenging as Bitcoin would require unusual conditions. Kidnapping is almost invariably related to organised crime and mafia activity with state involvement. Fiat targets are much simpler for obvious reasons.\n\nIf I were a Ricardo Salinas Pliego, for example, living in a country where it's a fairly common crime and having been very open about being a major hodler, I'd have serious security in place. I'm sure he does and understands the game he's playing.\n\nIf I found myself living in Sicily, I'd leave immediately, but again I don't think that level of mafia/government coordination exists in many countries.\n\nI do believe that FATF and many national governments are creating a system that incentivises crimes like kidnapping, and I suspect that's intentional. But Bitcoin is the best solution we have.",
+  "parent": "520085",
+  "comment_id":"520380",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 31,
+  "created_utc": "2024/04/27",
+  "body": "Yes, I think others handled the question perfectly on technical solutions. If you want to read more, I'd suggest the keywords 'bitcoin wrench attack'.\n\nI'm suggesting that you're more likely to be hit in more subtle ways that aren't specific to Bitcoin, especially if your focus is on guarding against a wrench attack. Consider your own environment, no advice fits everyone.\n\nWhen I was first learning about Bitcoin, I felt a bit like you - I didn't really trust myself to manage self-custody. Embracing it has been good for my confidence and self-respect, similar to working out.",
+  "parent": "520085",
+  "comment_id":"520652",
+  "reply_to_user": "self",
+  "reply_to_index": 30
+  }
+ },
+ {"data": {
+  "index": 32,
+  "created_utc": "2024/04/27",
+  "body": "Were you thinking of anything in particular?",
+  "parent": "520691",
+  "comment_id":"521296",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 33,
+  "created_utc": "2024/04/27",
+  "body": "That seems like three distinct quotes from different works, though I don't know which.\n\nI'm very sceptical of internet quote culture, I find it to be a huge net negative in terms of understanding. It seems that everyone points to the same few lines of the same few works and very often they make no sense outside of their context. To point to the original quote:\n\n\"When you understand everything you can forgive everything.\"\n\nThat's taken from War and Peace and I recognised it, but it's a female character written by Tolstoy quoting a French-Swiss author who wrote:\n\n\"Comprendre, c'est pardonner.\"\n\nIn the novel, she says (in French):\n\n\"Tout comprendre, c'est tout pardonner.\"\n\nIt's usually translated as:\n\n\"To understand all is to forgive all.\"\n\nIt helps paint the character and illustrates the influence of French thought and language in Russia at the time of Napolean's attempt to conquer it. Throughout the novel, Tolstoy is scathing as regards the Russian aristocracy and its mindless acceptance of Western European culture. Like Dostoevsky, he sees it as a mark of low self-esteem in the Russian character.\n\nSo in the end, I find reading quotes and making assessments based on them can often lead to judgements that don't reflect the author's work or intentions.\n\nI'm fond of Tolstoy but he has a huge of body of work I haven't read. I was just very surprised at the level of vitriol, I've never seen that before regarding his work.",
+  "parent": "520691",
+  "comment_id":"521311",
+  "reply_to_user": "self",
+  "reply_to_index": 32
+  }
+ },
+ {"data": {
+  "index": 34,
+  "created_utc": "2024/04/29",
+  "body": "When great powers are in a state of direct conflict, each has a strong justification to enact powers that wouldn't be accepted under conditions of peace. Without assigning responsibility to any side in the present conflict, the lack of interest in diplomatic solutions among bitcoiners has been remarkable.\n\nPartly, that's because you risk losing social media followers if you start commenting on areas outside your area of expertise. There is one notable exception, and his solution is for Russia to be conquered. I have no doubt that's been noticed in Moscow.\n\nAs much as I find there to be no reasonable alternative to permissionless hard money, anyone involved with Bitcoin in any way needs to consider how a people can defend itself against attacks like that which took place at Crocus City Hall. Russia believes the attackers were paid using Tron.\n\nhttps://en.sputniknews.africa/20240330/sputnik-finds-cryptocurrency-wallet-possibly-linked-to-crocus-city-hall-terrorist-attack-1065833994.html <https://en.sputniknews.africa/20240330/sputnik-finds-cryptocurrency-wallet-possibly-linked-to-crocus-city-hall-terrorist-attack-1065833994.html>\n\nIn the same way as I find it difficult to blame Moscow for its careful surveillance and suppression of domestic opposition with links to, and funding from, those who seek to conquer it, I find it difficult to blame Moscow alone for this decision, given the complete disinterest shown by those involved in cryptocurrency (Bitcoin in particular) in peaceful, diplomatic solutions.\n\nOf course, it leads us all closer to a CBDC dystopia. Russia's will certainly be interoperable with China's, as will that of the US in due course. But as that process unfolds, people involved with Bitcoin will have to assume the consequences of their political naïveté, dismissal of the victims of violence and ignorance of geopolitical realities.",
+  "parent": "522693",
+  "comment_id":"523151",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 35,
+  "created_utc": "2024/04/30",
+  "body": "This looks very well handled at a conceptual level. I'm sure the procedural transparency is appreciated by others as much as me, and I've no doubt the execution will fulfil the potential of the conceptual vision.\n\nIt looks like BOLT12 could be useful in this kind of architecture too. I look forward to seeing things move forward.",
+  "parent": "523435",
+  "comment_id":"523969",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 36,
+  "created_utc": "2024/04/30",
+  "body": "Very interesting, as always.\n\nI was looking at the word 'husband' a few days ago, wondering whether or how it is related to 'husbandry' in the agricultural sense. I suspected it conveyed a sense of looking after one's wife in the same way as one's cattle, but it's not so. It only means the master of the house, and it comes from the old Norse.\n\nhttps://www.etymonline.com/search?q=husband <https://www.etymonline.com/search?q=husband>\n\nThat replaced the word 'wer' from Old English, so previously husband and wife would have been wer and wife. The dictionary also reveals that wer only lives on in werewolf, but I'd like to see a wer revival.\n\nI'd always understood Esquire to be a consolation prize for the sons that weren't the eldest, so those that would go without a title. That corresponds to Chinese, where Mister is XianSheng 先生, literally 'first born'. I don't know whence comes the use of Esquire for the son of a father with the same name, I think it's an American tradition.",
+  "parent": "524031",
+  "comment_id":"524130",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 37,
+  "created_utc": "2024/04/30",
+  "body": "Shrewd is another interesting word. Plus ca change...",
+  "parent": "524031",
+  "comment_id":"524154",
+  "reply_to_user": "self",
+  "reply_to_index": 36
+  }
+ },
+ {"data": {
+  "index": 38,
+  "created_utc": "2024/04/30",
+  "body": "Wife is elusive and mysterious in this regard, as only seems fitting.",
+  "parent": "524031",
+  "comment_id":"524181",
+  "reply_to_user": "self",
+  "reply_to_index": 37
+  }
+ },
+ {"data": {
+  "index": 39,
+  "created_utc": "2024/04/30",
+  "body": "I'll hazard a guess though, that it shares a source with white and carries the sense of divine purity. You could read The White Goddess by Robert Graves for more on that history.",
+  "parent": "524031",
+  "comment_id":"524197",
+  "reply_to_user": "self",
+  "reply_to_index": 38
+  }
+ },
+ {"data": {
+  "index": 40,
+  "created_utc": "2024/04/30",
+  "body": "Their small web RSS feed (https://kagi.com/api/v1/smallweb/feed) is excellent too.\n\nDid you pay on lightning? I found the flow needed a bit of work.",
+  "parent": "524031",
+  "comment_id":"524679",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 41,
+  "created_utc": "2024/04/30",
+  "body": "With Core Lightning it's decodepay:\n\nhttps://docs.corelightning.org/reference/lightning-decodepay\n\nThat's if anyone here actually pays for sats or runs a node.",
+  "parent": "524642",
+  "comment_id":"524690",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 42,
+  "created_utc": "2024/04/30",
+  "body": "Imagine smearing Tor on a lightning site. Telling people to expose their IP address when they run a node, or hoping they don't run one at all and use your shitty centralised service.\n\nWhat a fucking joke.\n\nNo wonder Darthcoin is in here too with his bullshit advice.",
+  "parent": "524498",
+  "comment_id":"524755",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 43,
+  "created_utc": "2024/04/30",
+  "body": "The RSS is great, just needs a limit of the number of results returned.\n\nPosting this feedback here in case they lurk, but glad you're finding it useful too.",
+  "parent": "524031",
+  "comment_id":"524764",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ },
+ {"data": {
+  "index": 1,
+  "created_utc": "2024/04/30",
+  "body": "My suspicions confirmed. Grifters and LARPers fucking everywhere.",
+  "parent": "524498",
+  "comment_id":"524770",
+  "reply_to_user": 0,
+  "reply_to_index": 0
+  }
+ }
+]
