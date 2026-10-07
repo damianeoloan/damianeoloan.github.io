@@ -1,6 +1,8 @@
-- name: galleries
-  url: /galleries
-- name: blog
-  url: /blog/index
 - name: archives
   url: /archives
+- name: weblog
+  url: /blog/index
+- name: galleries
+  url: /galleries
+
+
