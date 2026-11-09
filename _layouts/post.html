@@ -30,6 +30,19 @@ layout: default
     {{ content }}
   </div>
 </article><!-- End post -->
+<!-- Start replies -->
+{% if site.data.weblog-replies[page.slug] %}
+<div class="weblog-replies">
+  <hr>
+  <h2>Replies</h2>
+  <ul>
+  {% for reply in site.data.weblog-replies[page.slug] %}
+    {% include weblog-reply.html %}
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
+<!-- End replies -->
 <!-- Start previous / next post links -->
 {% if page.previous %}
 <a class="post-seq previous-post" href="{{ page.previous.url | prepend: site.baseurl }}">PREV</br>POST</a>

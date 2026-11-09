@@ -1,0 +1,8 @@
+# Template
+#   - contributor_name: # A name or pseudonym
+#     body: # The content of the reply
+#   - contributor_name: # A name or pseudonym
+#     body: # The content of the reply
+
+- contributor_name: "Damian"
+  body: "To reply to this article, submit a pull request following the pattern established."

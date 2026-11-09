@@ -284,6 +284,20 @@ h1.post-title {
 }
 
 /**
+ * Post replies
+ */
+div.weblog-replies {
+  width: 70%;
+   margin: 0 auto var(--spacing-unit);
+  hr {
+    margin: 0 auto var(--spacing-unit);
+  }
+  ul {
+    list-style: none;
+  }
+}
+
+/**
  * Blog index
  */
  body.white-page {
