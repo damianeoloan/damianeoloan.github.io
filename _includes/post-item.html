@@ -1,6 +1,6 @@
 <!-- Blog post index item -->
 <li>
-  <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B, %Y" }}</time>
+  <time class="post-item-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
 
   <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
     <h2 class="no-margin">
