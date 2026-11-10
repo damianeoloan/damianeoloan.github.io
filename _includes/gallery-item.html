@@ -10,5 +10,12 @@
     </h2>
   </a>
 
-  <p class="gallery-meta">{{ gallery.location }}{% if gallery.time-period %} &middot; {{ gallery.time-period.start }} - {{ gallery.time-period.end }}{% endif %}</p>
+  <p class="gallery-meta">
+  {{ gallery.location }}
+  {% if gallery.time-period %} &middot; {% endif %}
+  {% if gallery.time-period.start %}
+    {{ gallery.time-period.start }}
+  {% endif %}
+  {% if.gallery.time-period.end %} - {{ gallery.time-period.end }}{% endif %}
+  </p>
 </li><!-- End gallery index item -->
