@@ -1,6 +1,7 @@
 <li>
-  <span itemprop="author" itemscope itemtype="http://schema.org/Person">{{ reply.contributor_name }}</span><span> | </span>
-  <time datetime="{{ 'now' | date_to_xmlschema }}">{{ "now" | date: "%B %-d, %Y" }}</time>
+  <span itemprop="author" itemscope itemtype="http://schema.org/Person">{{ reply.contributor_name }}</span>
+  <span> | </span>
+  <span>Reply #{{ forloop.index0 }}</span>
 
   <p class="weblog-reply-body">{{ reply.body }}</p>
 </li>
